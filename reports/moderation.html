@@ -1,0 +1,765 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <!-- Nội dung đã được prerender; không cần JavaScript hoặc HTTP server. -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#171714" />
+    <title>Moderation Eval | VF Forum Report</title>
+    <link rel="stylesheet" href="../assets/styles.css" />
+    <meta name="generator" content="VF Forum static artifact" />
+  </head>
+  <body class="static-html static-moderation">
+    <a class="skip-link" href="#main-content">Bỏ qua điều hướng</a>
+    <div id="app">
+      <div class="app-shell">
+        <aside class="sidebar" id="site-nav" aria-label="Điều hướng chính">
+          <a class="brand" href="../index.html">
+            <span class="brand-mark">VF</span>
+            <span class="brand-copy"
+              ><strong>Forum Report</strong><span>Product evidence</span></span
+            >
+          </a>
+          <nav>
+            <div class="nav-section">
+              <p class="nav-label">Tổng quan</p>
+
+              <a class="nav-link" href="../index.html">
+                <span class="nav-icon"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <rect x="3" y="3" width="7" height="7" rx="1"></rect>
+                    <rect x="14" y="3" width="7" height="7" rx="1"></rect>
+                    <rect x="3" y="14" width="7" height="7" rx="1"></rect>
+                    <rect x="14" y="14" width="7" height="7" rx="1"></rect></svg
+                ></span>
+                <span>Dashboard</span>
+              </a>
+              <a class="nav-link" href="../product.html">
+                <span class="nav-icon"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 4h14a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H8l-5 3V6a2 2 0 0 1 2-2Z"></path>
+                    <path d="M8 9h8M8 13h5"></path></svg
+                ></span>
+                <span>Tổng quan sản phẩm</span>
+              </a>
+              <a class="nav-link" href="../architecture.html">
+                <span class="nav-icon"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <rect x="3" y="3" width="7" height="7" rx="1"></rect>
+                    <rect x="14" y="14" width="7" height="7" rx="1"></rect>
+                    <path d="M10 6h4a4 4 0 0 1 4 4v4M14 18h-4a4 4 0 0 1-4-4v-4"></path></svg
+                ></span>
+                <span>Luồng &amp; kiến trúc</span>
+              </a>
+            </div>
+            <div class="nav-section">
+              <p class="nav-label">Báo cáo kiểm thử</p>
+
+              <a class="nav-link active" href="../reports/moderation.html" aria-current="page">
+                <span class="nav-icon"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"></path>
+                    <path d="m9 12 2 2 4-5"></path></svg
+                ></span>
+                <span>Moderation Eval</span>
+              </a>
+              <a class="nav-link" href="../reports/moderation-cases.html">
+                <span class="nav-icon"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M9 11h6M9 15h6M9 7h1"></path>
+                    <rect x="4" y="3" width="16" height="18" rx="2"></rect></svg
+                ></span>
+                <span>115 Cases</span>
+              </a>
+
+              <a class="nav-link" href="../reports/automated-tests.html">
+                <span class="nav-icon"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M9 3v5l-4 9a3 3 0 0 0 2.7 4h8.6a3 3 0 0 0 2.7-4l-4-9V3"></path>
+                    <path d="M7 14h10M8 3h8"></path></svg
+                ></span>
+                <span>Unit &amp; Integration</span>
+              </a>
+              <a class="nav-link" href="../reports/e2e-quality.html">
+                <span class="nav-icon"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="m4 12 5 5L20 6"></path></svg
+                ></span>
+                <span>E2E &amp; Quality Gates</span>
+              </a>
+            </div>
+          </nav>
+          <div class="sidebar-footer">
+            <strong>Báo cáo tĩnh · Sprint 3</strong>
+            Dữ liệu khóa ngày 2026-08-14
+          </div>
+        </aside>
+
+        <div class="workspace">
+          <header class="mobile-header">
+            <a class="mobile-brand" href="../index.html"
+              ><span class="brand-mark">VF</span> Forum Report</a
+            >
+            <details class="mobile-nav-details">
+              <summary class="menu-button" aria-label="Mở điều hướng">
+                <span></span><span></span><span></span>
+              </summary>
+              <div class="mobile-nav-panel">
+                <nav>
+                  <div class="nav-section">
+                    <p class="nav-label">Tổng quan</p>
+
+                    <a class="nav-link" href="../index.html">
+                      <span class="nav-icon"
+                        ><svg
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="1.8"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          aria-hidden="true"
+                        >
+                          <rect x="3" y="3" width="7" height="7" rx="1"></rect>
+                          <rect x="14" y="3" width="7" height="7" rx="1"></rect>
+                          <rect x="3" y="14" width="7" height="7" rx="1"></rect>
+                          <rect x="14" y="14" width="7" height="7" rx="1"></rect></svg
+                      ></span>
+                      <span>Dashboard</span>
+                    </a>
+                    <a class="nav-link" href="../product.html">
+                      <span class="nav-icon"
+                        ><svg
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="1.8"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          aria-hidden="true"
+                        >
+                          <path
+                            d="M5 4h14a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H8l-5 3V6a2 2 0 0 1 2-2Z"
+                          ></path>
+                          <path d="M8 9h8M8 13h5"></path></svg
+                      ></span>
+                      <span>Tổng quan sản phẩm</span>
+                    </a>
+                    <a class="nav-link" href="../architecture.html">
+                      <span class="nav-icon"
+                        ><svg
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="1.8"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          aria-hidden="true"
+                        >
+                          <rect x="3" y="3" width="7" height="7" rx="1"></rect>
+                          <rect x="14" y="14" width="7" height="7" rx="1"></rect>
+                          <path d="M10 6h4a4 4 0 0 1 4 4v4M14 18h-4a4 4 0 0 1-4-4v-4"></path></svg
+                      ></span>
+                      <span>Luồng &amp; kiến trúc</span>
+                    </a>
+                  </div>
+                  <div class="nav-section">
+                    <p class="nav-label">Báo cáo kiểm thử</p>
+
+                    <a
+                      class="nav-link active"
+                      href="../reports/moderation.html"
+                      aria-current="page"
+                    >
+                      <span class="nav-icon"
+                        ><svg
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="1.8"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          aria-hidden="true"
+                        >
+                          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"></path>
+                          <path d="m9 12 2 2 4-5"></path></svg
+                      ></span>
+                      <span>Moderation Eval</span>
+                    </a>
+                    <a class="nav-link" href="../reports/moderation-cases.html">
+                      <span class="nav-icon"
+                        ><svg
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="1.8"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          aria-hidden="true"
+                        >
+                          <path d="M9 11h6M9 15h6M9 7h1"></path>
+                          <rect x="4" y="3" width="16" height="18" rx="2"></rect></svg
+                      ></span>
+                      <span>115 Cases</span>
+                    </a>
+
+                    <a class="nav-link" href="../reports/automated-tests.html">
+                      <span class="nav-icon"
+                        ><svg
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="1.8"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          aria-hidden="true"
+                        >
+                          <path d="M9 3v5l-4 9a3 3 0 0 0 2.7 4h8.6a3 3 0 0 0 2.7-4l-4-9V3"></path>
+                          <path d="M7 14h10M8 3h8"></path></svg
+                      ></span>
+                      <span>Unit &amp; Integration</span>
+                    </a>
+                    <a class="nav-link" href="../reports/e2e-quality.html">
+                      <span class="nav-icon"
+                        ><svg
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="1.8"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          aria-hidden="true"
+                        >
+                          <path d="m4 12 5 5L20 6"></path></svg
+                      ></span>
+                      <span>E2E &amp; Quality Gates</span>
+                    </a>
+                  </div>
+                </nav>
+              </div>
+            </details>
+          </header>
+          <div class="topbar">
+            <div class="breadcrumb">
+              <span>VF Forum</span><span>/</span><span>Báo cáo</span><span>/</span
+              ><b>Moderation Eval</b>
+            </div>
+            <div class="topbar-meta">
+              <span class="live-dot"></span><span>SNAPSHOT · 2026-08-14</span>
+            </div>
+          </div>
+          <main class="content" id="main-content">
+            <header class="page-head">
+              <div class="page-head-copy">
+                <p class="eyebrow">AI evaluation · Official live</p>
+                <h1>Moderation đạt 98,3% trên 115 cases.</h1>
+                <p class="lede">Kết quả pipeline hai lớp, dataset và giới hạn provenance.</p>
+              </div>
+              <div class="actions">
+                <a class="button button-primary" href="../reports/moderation-cases.html"
+                  ><span>Khám phá 115 cases</span
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M9 11h6M9 15h6M9 7h1"></path>
+                    <rect x="4" y="3" width="16" height="18" rx="2"></rect></svg
+                ></a>
+                <a class="button button-secondary" href="./langfuse-live-115.html"
+                  ><span>Tóm tắt eval 115 cases</span
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M4 19V5M4 19h16"></path>
+                    <path d="m7 15 4-4 3 2 4-6"></path></svg
+                ></a>
+              </div>
+            </header>
+
+            <div class="note">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M12 3 2.8 20h18.4L12 3Z"></path>
+                <path d="M12 9v5M12 17h.01"></path>
+              </svg>
+              <div>
+                <strong>Ranh giới dữ liệu</strong>
+                <p>
+                  Trang này giữ summary official lịch sử 113/115. Snapshot development/local mới hơn
+                  được tóm tắt riêng ở AI Eval 115 cases; trang cases vẫn chỉ trình bày canonical
+                  dataset và expected labels, không suy diễn actual result từng case.
+                </p>
+              </div>
+            </div>
+
+            <section class="section">
+              <div class="kpi-grid">
+                <article class="card kpi-card">
+                  <div class="kpi-top">
+                    <span class="kpi-label">Accuracy</span
+                    ><span class="kpi-icon"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                      >
+                        <circle cx="12" cy="12" r="9"></circle>
+                        <circle cx="12" cy="12" r="4"></circle>
+                        <path d="m15 9 6-6"></path></svg
+                    ></span>
+                  </div>
+                  <div class="kpi-value">98,3%</div>
+                  <div class="kpi-sub">113 đúng trên 115 cases</div>
+                </article>
+
+                <article class="card kpi-card">
+                  <div class="kpi-top">
+                    <span class="kpi-label">Official gate</span
+                    ><span class="kpi-icon"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                      >
+                        <path d="m4 12 5 5L20 6"></path></svg
+                    ></span>
+                  </div>
+                  <div class="kpi-value">PASS</div>
+                  <div class="kpi-sub">Vượt ngưỡng acceptance</div>
+                </article>
+
+                <article class="card kpi-card">
+                  <div class="kpi-top">
+                    <span class="kpi-label">Pipeline failure</span
+                    ><span class="kpi-icon"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                      >
+                        <rect x="3" y="3" width="7" height="7" rx="1"></rect>
+                        <rect x="14" y="14" width="7" height="7" rx="1"></rect>
+                        <path d="M10 6h4a4 4 0 0 1 4 4v4M14 18h-4a4 4 0 0 1-4-4v-4"></path></svg
+                    ></span>
+                  </div>
+                  <div class="kpi-value">0</div>
+                  <div class="kpi-sub">Full-selection hoàn tất</div>
+                </article>
+
+                <article class="card kpi-card">
+                  <div class="kpi-top">
+                    <span class="kpi-label">Unsafe approval</span
+                    ><span class="kpi-icon"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                      >
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"></path>
+                        <path d="m9 12 2 2 4-5"></path></svg
+                    ></span>
+                  </div>
+                  <div class="kpi-value">0</div>
+                  <div class="kpi-sub">Không lọt nội dung nguy hiểm</div>
+                </article>
+              </div>
+            </section>
+
+            <section class="section">
+              <div class="section-head">
+                <div>
+                  <p class="section-kicker">Breakdown</p>
+                  <h2>Độ chính xác theo ngôn ngữ</h2>
+                  <p class="section-copy">
+                    Mỗi nhóm ngôn ngữ đều vượt 90%; EN và mixed đạt tuyệt đối trong run này.
+                  </p>
+                </div>
+                <span class="section-index">01</span>
+              </div>
+              <div class="grid-main-aside">
+                <article class="card card-pad">
+                  <div class="card-head">
+                    <div>
+                      <h3>Language accuracy</h3>
+                      <p>Correct / total: 61/63 · 24/24 · 28/28</p>
+                    </div>
+                    <span class="chip chip-live">Live evidence</span>
+                  </div>
+                  <div class="bar-list">
+                    <div class="bar-row">
+                      <span class="bar-label">Tiếng Việt</span>
+                      <span class="bar-track"
+                        ><span class="bar-fill good" style="--value: 96.8%"></span
+                      ></span>
+                      <span class="bar-value">96,8%</span>
+                    </div>
+                    <div class="bar-row">
+                      <span class="bar-label">Tiếng Anh</span>
+                      <span class="bar-track"
+                        ><span class="bar-fill good" style="--value: 100%"></span
+                      ></span>
+                      <span class="bar-value">100%</span>
+                    </div>
+                    <div class="bar-row">
+                      <span class="bar-label">Hỗn hợp</span>
+                      <span class="bar-track"
+                        ><span class="bar-fill good" style="--value: 100%"></span
+                      ></span>
+                      <span class="bar-value">100%</span>
+                    </div>
+                  </div>
+                </article>
+                <article class="card card-pad">
+                  <div class="card-head">
+                    <div>
+                      <h3>Overall</h3>
+                      <p>Official full-selection</p>
+                    </div>
+                    <span class="chip chip-pass">PASS</span>
+                  </div>
+                  <div class="donut-wrap">
+                    <div class="donut" style="--donut: 98.3%">
+                      <div><strong>98,3%</strong><span>113 / 115</span></div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </section>
+
+            <section class="section">
+              <div class="section-head">
+                <div>
+                  <p class="section-kicker">Dataset</p>
+                  <h2>115 cases được phân bố thế nào?</h2>
+                  <p class="section-copy">
+                    Số liệu được đọc từ canonical dataset hiện hành, không lấy từ artifact 107 cases
+                    cũ.
+                  </p>
+                </div>
+                <span class="section-index">02</span>
+              </div>
+              <div class="grid-3">
+                <article class="card card-pad">
+                  <div class="card-head">
+                    <div>
+                      <h3>Theo loại input</h3>
+                      <p>Tổng 115</p>
+                    </div>
+                  </div>
+                  <div class="bar-list">
+                    <div class="bar-row">
+                      <span class="bar-label">Post Text</span>
+                      <span class="bar-track"
+                        ><span class="bar-fill" style="--value: 42.608695652173914%"></span
+                      ></span>
+                      <span class="bar-value">49</span>
+                    </div>
+                    <div class="bar-row">
+                      <span class="bar-label">Comment Text</span>
+                      <span class="bar-track"
+                        ><span class="bar-fill" style="--value: 36.52173913043478%"></span
+                      ></span>
+                      <span class="bar-value">42</span>
+                    </div>
+                    <div class="bar-row">
+                      <span class="bar-label">Post Image</span>
+                      <span class="bar-track"
+                        ><span class="bar-fill" style="--value: 20.869565217391305%"></span
+                      ></span>
+                      <span class="bar-value">24</span>
+                    </div>
+                  </div>
+                </article>
+                <article class="card card-pad">
+                  <div class="card-head">
+                    <div>
+                      <h3>Theo expected verdict</h3>
+                      <p>Approve / reject / review</p>
+                    </div>
+                  </div>
+                  <div class="bar-list">
+                    <div class="bar-row">
+                      <span class="bar-label">Approve</span>
+                      <span class="bar-track"
+                        ><span class="bar-fill" style="--value: 32.17391304347826%"></span
+                      ></span>
+                      <span class="bar-value">37</span>
+                    </div>
+                    <div class="bar-row">
+                      <span class="bar-label">Reject</span>
+                      <span class="bar-track"
+                        ><span class="bar-fill" style="--value: 43.47826086956522%"></span
+                      ></span>
+                      <span class="bar-value">50</span>
+                    </div>
+                    <div class="bar-row">
+                      <span class="bar-label">Pending review</span>
+                      <span class="bar-track"
+                        ><span class="bar-fill" style="--value: 24.347826086956523%"></span
+                      ></span>
+                      <span class="bar-value">28</span>
+                    </div>
+                  </div>
+                </article>
+                <article class="card card-pad">
+                  <div class="card-head">
+                    <div>
+                      <h3>Theo suite</h3>
+                      <p>Policy và layer routing</p>
+                    </div>
+                  </div>
+                  <div class="bar-list">
+                    <div class="bar-row">
+                      <span class="bar-label">Community rules</span>
+                      <span class="bar-track"
+                        ><span class="bar-fill" style="--value: 84.34782608695653%"></span
+                      ></span>
+                      <span class="bar-value">97</span>
+                    </div>
+                    <div class="bar-row">
+                      <span class="bar-label">Layer routing</span>
+                      <span class="bar-track"
+                        ><span class="bar-fill" style="--value: 15.65217391304348%"></span
+                      ></span>
+                      <span class="bar-value">18</span>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </section>
+
+            <section class="section">
+              <div class="section-head">
+                <div>
+                  <p class="section-kicker">Mismatches</p>
+                  <h2>Hai case cần đọc đúng ngữ cảnh</h2>
+                  <p class="section-copy">Cả hai đều không tạo unsafe false approval.</p>
+                </div>
+                <span class="section-index">03</span>
+              </div>
+              <div class="grid-2">
+                <article class="card card-pad">
+                  <div class="card-head">
+                    <div>
+                      <h3>MC-065</h3>
+                      <p>Metadata mismatch</p>
+                    </div>
+                    <span class="chip chip-warn">Safe outcome</span>
+                  </div>
+                  <p class="lede" style="font-size: 12px">
+                    Verdict vẫn đúng pending_review, nhưng rule/content-source không khớp toàn bộ
+                    expected case.
+                  </p>
+                  <div class="note info" style="margin-top: 18px">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <path d="M12 11v6M12 7h.01"></path>
+                    </svg>
+                    <div>
+                      <strong>Ý nghĩa an toàn</strong>
+                      <p>Không thay đổi quyết định an toàn cuối cùng.</p>
+                    </div>
+                  </div>
+                </article>
+                <article class="card card-pad">
+                  <div class="card-head">
+                    <div>
+                      <h3>MC-124</h3>
+                      <p>Safe false positive</p>
+                    </div>
+                    <span class="chip chip-warn">Safe outcome</span>
+                  </div>
+                  <p class="lede" style="font-size: 12px">
+                    Expected approve, actual pending_review/CR-006/text cho câu hỏi mã lỗi P0A7F00.
+                  </p>
+                  <div class="note info" style="margin-top: 18px">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <path d="M12 11v6M12 7h.01"></path>
+                    </svg>
+                    <div>
+                      <strong>Ý nghĩa an toàn</strong>
+                      <p>Chuyển thêm sang Moderator; không phải false approval nguy hiểm.</p>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </section>
+
+            <section class="section">
+              <div class="section-head">
+                <div>
+                  <p class="section-kicker">Run configuration</p>
+                  <h2>Provenance của kết quả</h2>
+                  <p class="section-copy">
+                    Thông tin đủ để phân biệt run chính thức với dry-run hoặc artifact lịch sử.
+                  </p>
+                </div>
+                <span class="section-index">04</span>
+              </div>
+              <div class="table-wrap">
+                <div class="table-scroll">
+                  <table class="report-table">
+                    <thead>
+                      <tr>
+                        <th>Thuộc tính</th>
+                        <th>Giá trị</th>
+                        <th>Ý nghĩa</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Evidence</td>
+                        <td><span class="chip chip-live">Live evidence</span></td>
+                        <td>Official live full-selection</td>
+                      </tr>
+                      <tr>
+                        <td>Dataset SHA-256</td>
+                        <td>
+                          <code class="source-path"
+                            >a2aa79ccbf62378766ee7960da48611456b3e782ee5eab0fdff330de98133f9d</code
+                          >
+                        </td>
+                        <td>Khóa đúng dataset 115 đã chạy</td>
+                      </tr>
+                      <tr>
+                        <td>Layer 1</td>
+                        <td class="number-cell">omni-moderation-latest</td>
+                        <td>Platform safety</td>
+                      </tr>
+                      <tr>
+                        <td>Layer 2</td>
+                        <td class="number-cell">gpt-5-mini</td>
+                        <td>Community policy</td>
+                      </tr>
+                      <tr>
+                        <td>Policy</td>
+                        <td class="number-cell">moderation-policy-v4</td>
+                        <td>CR-001…CR-006</td>
+                      </tr>
+                      <tr>
+                        <td>Concurrency</td>
+                        <td class="number-cell">2</td>
+                        <td>Giới hạn request song song</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </section>
+            <footer class="footer-note">
+              <span>VF Forum · Báo cáo tĩnh dành cho quản lý &amp; mentor</span>
+              <span>Snapshot 2026-08-14 · Không chứa secrets hoặc dữ liệu cá nhân thật</span>
+            </footer>
+          </main>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
