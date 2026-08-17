@@ -1,589 +1,722 @@
 <!doctype html>
 <html lang="vi">
   <head>
-    <!-- Nội dung đã được prerender; không cần JavaScript hoặc HTTP server. -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#171714" />
-    <title>Hướng dẫn demo | VF Forum Report</title>
-    <link rel="stylesheet" href="assets/styles.css" />
+    <meta name="theme-color" content="#146fca" />
     <meta name="generator" content="VF Forum static artifact" />
+    <title>Demo cases | VF Forum Report</title>
+    <link rel="stylesheet" href="assets/styles.css" />
   </head>
-  <body class="static-html static-demo">
+  <body class="static-html static-demo static-with-sidebar">
     <a class="skip-link" href="#main-content">Bỏ qua điều hướng</a>
-    <div id="app">
-      <div class="app-shell">
-        <aside class="sidebar" id="site-nav" aria-label="Điều hướng chính">
-          <a class="brand" href="./index.html">
-            <span class="brand-mark">VF</span>
-            <span class="brand-copy"
-              ><strong>Forum Report</strong><span>Product evidence</span></span
-            >
-          </a>
-          <nav>
-            <div class="nav-section">
-              <p class="nav-label">Tổng quan</p>
-
-              <a class="nav-link" href="./index.html">
-                <span class="nav-icon"
-                  ><svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.8"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    aria-hidden="true"
-                  >
-                    <rect x="3" y="3" width="7" height="7" rx="1"></rect>
-                    <rect x="14" y="3" width="7" height="7" rx="1"></rect>
-                    <rect x="3" y="14" width="7" height="7" rx="1"></rect>
-                    <rect x="14" y="14" width="7" height="7" rx="1"></rect></svg
-                ></span>
-                <span>Dashboard</span>
-              </a>
-              <a class="nav-link" href="./product.html">
-                <span class="nav-icon"
-                  ><svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.8"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    aria-hidden="true"
-                  >
-                    <path d="M5 4h14a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H8l-5 3V6a2 2 0 0 1 2-2Z"></path>
-                    <path d="M8 9h8M8 13h5"></path></svg
-                ></span>
-                <span>Tổng quan sản phẩm</span>
-              </a>
-              <a class="nav-link" href="./architecture.html">
-                <span class="nav-icon"
-                  ><svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.8"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    aria-hidden="true"
-                  >
-                    <rect x="3" y="3" width="7" height="7" rx="1"></rect>
-                    <rect x="14" y="14" width="7" height="7" rx="1"></rect>
-                    <path d="M10 6h4a4 4 0 0 1 4 4v4M14 18h-4a4 4 0 0 1-4-4v-4"></path></svg
-                ></span>
-                <span>Luồng &amp; kiến trúc</span>
-              </a>
-            </div>
-            <div class="nav-section">
-              <p class="nav-label">Báo cáo kiểm thử</p>
-
-              <a class="nav-link" href="./reports/moderation.html">
-                <span class="nav-icon"
-                  ><svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.8"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    aria-hidden="true"
-                  >
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"></path>
-                    <path d="m9 12 2 2 4-5"></path></svg
-                ></span>
-                <span>Moderation Eval</span>
-              </a>
-              <a class="nav-link" href="./reports/moderation-cases.html">
-                <span class="nav-icon"
-                  ><svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.8"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    aria-hidden="true"
-                  >
-                    <path d="M9 11h6M9 15h6M9 7h1"></path>
-                    <rect x="4" y="3" width="16" height="18" rx="2"></rect></svg
-                ></span>
-                <span>115 Cases</span>
-              </a>
-
-              <a class="nav-link" href="./reports/automated-tests.html">
-                <span class="nav-icon"
-                  ><svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.8"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    aria-hidden="true"
-                  >
-                    <path d="M9 3v5l-4 9a3 3 0 0 0 2.7 4h8.6a3 3 0 0 0 2.7-4l-4-9V3"></path>
-                    <path d="M7 14h10M8 3h8"></path></svg
-                ></span>
-                <span>Unit &amp; Integration</span>
-              </a>
-              <a class="nav-link" href="./reports/e2e-quality.html">
-                <span class="nav-icon"
-                  ><svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.8"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    aria-hidden="true"
-                  >
-                    <path d="m4 12 5 5L20 6"></path></svg
-                ></span>
-                <span>E2E &amp; Quality Gates</span>
-              </a>
-            </div>
-          </nav>
-          <div class="sidebar-footer">
-            <strong>Báo cáo tĩnh · Sprint 3</strong>
-            Dữ liệu khóa ngày 2026-08-14
+    <div class="app-shell">
+      <aside class="sidebar" id="site-nav" aria-label="Điều hướng chính">
+        <a class="brand" href="./index.html">
+          <span class="brand-mark">VF</span>
+          <span class="brand-copy"><strong>Forum Report</strong><span>Product evidence</span></span>
+        </a>
+        <nav>
+          <div class="nav-section">
+            <p class="nav-label">Tổng quan</p>
+            <a class="nav-link nav-dashboard" href="./index.html">
+              <span class="nav-icon"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <rect x="3" y="3" width="7" height="7" rx="1"></rect>
+                  <rect x="14" y="3" width="7" height="7" rx="1"></rect>
+                  <rect x="3" y="14" width="7" height="7" rx="1"></rect>
+                  <rect x="14" y="14" width="7" height="7" rx="1"></rect></svg
+              ></span>
+              <span>Dashboard</span>
+            </a>
+            <a class="nav-link nav-future" href="./future-features.html">
+              <span class="nav-icon"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M5 4h14a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H8l-5 3V6a2 2 0 0 1 2-2Z"></path>
+                  <path d="M8 9h8M8 13h5"></path></svg
+              ></span>
+              <span>Ngoài MVP</span>
+            </a>
+            <a class="nav-link nav-flow" href="./architecture.html">
+              <span class="nav-icon"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <rect x="3" y="3" width="7" height="7" rx="1"></rect>
+                  <rect x="14" y="14" width="7" height="7" rx="1"></rect>
+                  <path d="M10 6h4a4 4 0 0 1 4 4v4M14 18h-4a4 4 0 0 1-4-4v-4"></path></svg
+              ></span>
+              <span>Luồng &amp; kiến trúc</span>
+            </a>
           </div>
-        </aside>
+          <div class="nav-section">
+            <p class="nav-label">Báo cáo kiểm thử</p>
+            <a class="nav-link nav-metrics" href="./reports/langfuse-live-115.html">
+              <span class="nav-icon"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"></path>
+                  <path d="m9 12 2 2 4-5"></path></svg
+              ></span>
+              <span>Metric eval</span>
+            </a>
+            <a class="nav-link nav-cases" href="./reports/moderation-cases.html">
+              <span class="nav-icon"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M9 11h6M9 15h6M9 7h1"></path>
+                  <rect x="4" y="3" width="16" height="18" rx="2"></rect></svg
+              ></span>
+              <span>115 Cases</span>
+            </a>
+            <a class="nav-link nav-demo active" href="./demo.html" aria-current="page">
+              <span class="nav-icon"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M9 3v5l-4 9a3 3 0 0 0 2.7 4h8.6a3 3 0 0 0 2.7-4l-4-9V3"></path>
+                  <path d="M7 14h10M8 3h8"></path></svg
+              ></span>
+              <span>Demo cases</span>
+            </a>
+            <a class="nav-link nav-archive index-nav-hidden" href="./reports/e2e-quality.html">
+              <span class="nav-icon"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="m4 12 5 5L20 6"></path></svg
+              ></span>
+              <span>E2E &amp; Quality Gates</span>
+            </a>
+          </div>
+        </nav>
+        <div class="sidebar-footer">
+          <strong>Báo cáo tĩnh · Sprint 3</strong>
+          Dữ liệu khóa ngày 2026-08-14
+        </div>
+      </aside>
 
-        <div class="workspace">
-          <header class="mobile-header">
-            <a class="mobile-brand" href="./index.html"
-              ><span class="brand-mark">VF</span> Forum Report</a
-            >
-            <details class="mobile-nav-details">
-              <summary class="menu-button" aria-label="Mở điều hướng">
-                <span></span><span></span><span></span>
-              </summary>
-              <div class="mobile-nav-panel">
-                <nav>
-                  <div class="nav-section">
-                    <p class="nav-label">Tổng quan</p>
+      <div class="workspace">
+        <header class="mobile-header">
+          <a class="mobile-brand" href="./index.html"
+            ><span class="brand-mark">VF</span> Forum Report</a
+          >
+          <details class="mobile-nav-details">
+            <summary class="menu-button" aria-label="Mở điều hướng">
+              <span></span><span></span><span></span>
+            </summary>
+            <div class="mobile-nav-panel">
+              <nav>
+                <div class="nav-section">
+                  <p class="nav-label">Tổng quan</p>
+                  <a class="nav-link nav-dashboard" href="./index.html"><span>Dashboard</span></a>
+                  <a class="nav-link nav-future" href="./future-features.html"
+                    ><span>Ngoài MVP</span></a
+                  >
+                  <a class="nav-link nav-flow" href="./architecture.html"
+                    ><span>Luồng &amp; kiến trúc</span></a
+                  >
+                </div>
+                <div class="nav-section">
+                  <p class="nav-label">Báo cáo kiểm thử</p>
+                  <a class="nav-link nav-metrics" href="./reports/langfuse-live-115.html"
+                    ><span>Metric eval</span></a
+                  >
+                  <a class="nav-link nav-cases" href="./reports/moderation-cases.html"
+                    ><span>115 Cases</span></a
+                  >
+                  <a class="nav-link nav-demo active" href="./demo.html" aria-current="page"
+                    ><span>Demo cases</span></a
+                  >
+                  <a class="nav-link nav-archive index-nav-hidden" href="./reports/e2e-quality.html"
+                    ><span>E2E &amp; Quality Gates</span></a
+                  >
+                </div>
+              </nav>
+            </div>
+          </details>
+        </header>
+        <div class="topbar">
+          <div class="breadcrumb">
+            <span>VF Forum</span><span>/</span><span>Trình bày</span><span>/</span><b>Demo cases</b>
+          </div>
+          <div class="topbar-meta">
+            <span class="live-dot"></span><span>STATIC · 2026-08-14</span>
+          </div>
+        </div>
 
-                    <a class="nav-link" href="./index.html">
-                      <span class="nav-icon"
-                        ><svg
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="1.8"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          aria-hidden="true"
-                        >
-                          <rect x="3" y="3" width="7" height="7" rx="1"></rect>
-                          <rect x="14" y="3" width="7" height="7" rx="1"></rect>
-                          <rect x="3" y="14" width="7" height="7" rx="1"></rect>
-                          <rect x="14" y="14" width="7" height="7" rx="1"></rect></svg
-                      ></span>
-                      <span>Dashboard</span>
-                    </a>
-                    <a class="nav-link" href="./product.html">
-                      <span class="nav-icon"
-                        ><svg
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="1.8"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          aria-hidden="true"
-                        >
-                          <path
-                            d="M5 4h14a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H8l-5 3V6a2 2 0 0 1 2-2Z"
-                          ></path>
-                          <path d="M8 9h8M8 13h5"></path></svg
-                      ></span>
-                      <span>Tổng quan sản phẩm</span>
-                    </a>
-                    <a class="nav-link" href="./architecture.html">
-                      <span class="nav-icon"
-                        ><svg
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="1.8"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          aria-hidden="true"
-                        >
-                          <rect x="3" y="3" width="7" height="7" rx="1"></rect>
-                          <rect x="14" y="14" width="7" height="7" rx="1"></rect>
-                          <path d="M10 6h4a4 4 0 0 1 4 4v4M14 18h-4a4 4 0 0 1-4-4v-4"></path></svg
-                      ></span>
-                      <span>Luồng &amp; kiến trúc</span>
-                    </a>
-                  </div>
-                  <div class="nav-section">
-                    <p class="nav-label">Báo cáo kiểm thử</p>
-
-                    <a class="nav-link" href="./reports/moderation.html">
-                      <span class="nav-icon"
-                        ><svg
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="1.8"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          aria-hidden="true"
-                        >
-                          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"></path>
-                          <path d="m9 12 2 2 4-5"></path></svg
-                      ></span>
-                      <span>Moderation Eval</span>
-                    </a>
-                    <a class="nav-link" href="./reports/moderation-cases.html">
-                      <span class="nav-icon"
-                        ><svg
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="1.8"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          aria-hidden="true"
-                        >
-                          <path d="M9 11h6M9 15h6M9 7h1"></path>
-                          <rect x="4" y="3" width="16" height="18" rx="2"></rect></svg
-                      ></span>
-                      <span>115 Cases</span>
-                    </a>
-
-                    <a class="nav-link" href="./reports/automated-tests.html">
-                      <span class="nav-icon"
-                        ><svg
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="1.8"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          aria-hidden="true"
-                        >
-                          <path d="M9 3v5l-4 9a3 3 0 0 0 2.7 4h8.6a3 3 0 0 0 2.7-4l-4-9V3"></path>
-                          <path d="M7 14h10M8 3h8"></path></svg
-                      ></span>
-                      <span>Unit &amp; Integration</span>
-                    </a>
-                    <a class="nav-link" href="./reports/e2e-quality.html">
-                      <span class="nav-icon"
-                        ><svg
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="1.8"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          aria-hidden="true"
-                        >
-                          <path d="m4 12 5 5L20 6"></path></svg
-                      ></span>
-                      <span>E2E &amp; Quality Gates</span>
-                    </a>
-                  </div>
-                </nav>
-              </div>
-            </details>
+        <main class="content" id="main-content">
+          <header class="page-head">
+            <div class="page-head-copy">
+              <p class="eyebrow">Demo cases · 10 tình huống · 12–15 phút</p>
+              <h1>Demo bằng case: thấy rõ đầu vào, quyết định và kết quả.</h1>
+              <p class="lede">
+                Danh sách ngắn để trình bày các tính năng chính: gợi ý Topic, Post văn bản, Post có
+                ảnh và Comment. Mỗi case ghi sẵn điều kiện, thao tác và kết quả mong đợi để buổi
+                demo nhất quán.
+              </p>
+            </div>
+            <div class="actions">
+              <a class="button button-secondary" href="./reports/moderation-cases.html"
+                >Xem 115 cases</a
+              >
+              <a class="button button-primary" href="./slides.html">Mở slide</a>
+            </div>
           </header>
-          <div class="topbar">
-            <div class="breadcrumb">
-              <span>VF Forum</span><span>/</span><span>Trình bày</span><span>/</span
-              ><b>Hướng dẫn demo</b>
-            </div>
-            <div class="topbar-meta">
-              <span class="live-dot"></span><span>SNAPSHOT · 2026-08-14</span>
-            </div>
-          </div>
-          <main class="content" id="main-content">
-            <header class="page-head">
-              <div class="page-head-copy">
-                <p class="eyebrow">Demo runbook · 10–12 phút</p>
-                <h1>Demo 10 phút, 5 điểm chính.</h1>
-                <p class="lede">
-                  Dùng dữ liệu giả lập, không hiển thị password, API key hoặc dữ liệu thật.
+
+          <section class="demo-intro" aria-label="Tóm tắt phạm vi demo">
+            <article class="card demo-intro-card">
+              <p class="section-kicker">Phạm vi</p>
+              <strong>10 case chọn lọc</strong>
+              <span>2 Topic · 4 text/comment · 4 ảnh</span>
+            </article>
+            <article class="card demo-intro-card">
+              <p class="section-kicker">Quyết định</p>
+              <strong>Approve · reject</strong>
+              <span>Có 1 case giữ nguyên Topic</span>
+            </article>
+            <article class="card demo-intro-card">
+              <p class="section-kicker">Bằng chứng</p>
+              <strong>Fixture xác định</strong>
+              <span>Ảnh mock, không có dữ liệu thật</span>
+            </article>
+          </section>
+
+          <section class="section">
+            <div class="section-head">
+              <div>
+                <p class="section-kicker">Cách chạy demo</p>
+                <h2>Dùng cùng một cách quan sát cho mọi case</h2>
+                <p class="section-copy">
+                  Chỉ cần nạp môi trường demo, chọn case dưới đây và so sánh màn hình với kết quả
+                  mong đợi. Không cần gọi provider hoặc sửa dữ liệu khi đang trình bày.
                 </p>
               </div>
-              <div class="actions">
-                <a class="button button-primary" href="./slides.html"
-                  ><span>Mở slide</span
-                  ><svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.8"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    aria-hidden="true"
-                  >
-                    <rect x="3" y="4" width="18" height="14" rx="2"></rect>
-                    <path d="M8 22h8M12 18v4M7 9h6M7 13h10"></path></svg
-                ></a>
-              </div>
-            </header>
-            <section class="section" style="margin-top: 0">
-              <div class="section-head">
-                <div>
-                  <p class="section-kicker">Chuẩn bị</p>
-                  <h2>Môi trường và dữ liệu demo</h2>
-                  <p class="section-copy">
-                    Nên dùng database/Redis demo hoặc disposable để kết quả có thể lặp lại.
-                  </p>
-                </div>
-                <span class="section-index">01</span>
-              </div>
-              <div class="grid-main-aside">
-                <article class="card card-pad">
-                  <div class="card-head">
+              <span class="section-index">01</span>
+            </div>
+            <div class="grid-main-aside">
+              <article class="card card-pad">
+                <ol class="demo-checklist">
+                  <li>
+                    <span>1</span>
                     <div>
-                      <h3>Khởi động</h3>
-                      <p>Chạy theo thứ tự</p>
+                      <strong>Chọn case</strong>
+                      <p>Đọc input, Topic hiện tại và role ghi trên thẻ case.</p>
                     </div>
-                    <span class="chip chip-info">3 commands</span>
-                  </div>
-                  <pre class="command">
-npm run db:migrate
-npm run db:seed
-npm run dev</pre>
-                </article>
-                <article class="card card-pad">
-                  <div class="card-head">
+                  </li>
+                  <li>
+                    <span>2</span>
                     <div>
-                      <h3>Seed readiness</h3>
-                      <p>Fixture giả lập</p>
+                      <strong>Thực hiện một thao tác</strong>
+                      <p>Tạo Post/Comment hoặc chọn Topic theo đúng nội dung fixture.</p>
                     </div>
-                    <span class="chip chip-pass">PASS</span>
-                  </div>
-                  <ul class="source-list">
-                    <li class="source-item">
-                      <span class="item-index">07</span>
-                      <div>
-                        <p class="item-title">Topic</p>
-                        <p class="item-copy">6 active + 1 inactive cho demo</p>
-                      </div>
-                    </li>
-                    <li class="source-item">
-                      <span class="item-index">36</span>
-                      <div>
-                        <p class="item-title">Tài khoản demo</p>
-                        <p class="item-copy">Customer, Expert, Moderator và Admin</p>
-                      </div>
-                    </li>
-                    <li class="source-item">
-                      <span class="item-index">120 / 240</span>
-                      <div>
-                        <p class="item-title">Post / Comment</p>
-                        <p class="item-copy">70% VI · 15% mixed · 15% EN</p>
-                      </div>
-                    </li>
-                    <li class="source-item">
-                      <span class="item-index">466 / 48</span>
-                      <div>
-                        <p class="item-title">Moderation log / ảnh fixture</p>
-                        <p class="item-copy">AI, human, legacy và ảnh mô phỏng an toàn</p>
-                      </div>
-                    </li>
-                  </ul>
-                </article>
-              </div>
-              <div class="note info" style="margin-top: 12px">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.8"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  aria-hidden="true"
-                >
-                  <rect x="4" y="10" width="16" height="11" rx="2"></rect>
-                  <path d="M8 10V7a4 4 0 0 1 8 0v3"></path>
-                </svg>
+                  </li>
+                  <li>
+                    <span>3</span>
+                    <div>
+                      <strong>Quan sát trạng thái</strong>
+                      <p>Đối chiếu verdict, khả năng hiển thị public và gợi ý Topic.</p>
+                    </div>
+                  </li>
+                </ol>
+              </article>
+              <aside class="note info demo-note">
                 <div>
-                  <strong>Tài khoản giả lập</strong>
+                  <strong>Quy ước đọc kết quả</strong>
                   <p>
-                    customer1@demo.local · expert@demo.local · moderator@demo.local ·
-                    admin@demo.local · expert-quota@demo.local. Mật khẩu lấy từ SEED_DEMO_PASSWORD
-                    và không hiển thị.
+                    “Expected” là nhãn canonical của case test, không phải kết quả live mới chạy.
+                    Với Topic, hệ thống chỉ đề xuất; người dùng vẫn là người quyết định đổi Topic.
                   </p>
                 </div>
-              </div>
-            </section>
+              </aside>
+            </div>
+          </section>
 
-            <section class="section">
-              <div class="section-head">
-                <div>
-                  <p class="section-kicker">Kịch bản chính</p>
-                  <h2>Năm bước demo sản phẩm</h2>
-                  <p class="section-copy">
-                    Mỗi bước gồm thao tác, vai trò và kết quả UI/API cần quan sát.
-                  </p>
+          <section class="section" aria-labelledby="layer1-cases-title">
+            <div class="section-head">
+              <div>
+                <p class="section-kicker">Ưu tiên demo · Layer 1 safety</p>
+                <h2 id="layer1-cases-title">Hai checkpoint an toàn chạy trước mọi policy</h2>
+                <p class="section-copy">
+                  Layer 1 quét văn bản và từng ảnh trước Layer 2. Đặt hai case này đầu tiên để minh
+                  họa rõ cơ chế dừng sớm và kiểm tra ảnh.
+                </p>
+              </div>
+              <span class="section-index">02</span>
+            </div>
+            <div class="demo-case-grid">
+              <article class="card demo-case">
+                <div class="demo-case-head">
+                  <span class="demo-case-no">01</span>
+                  <div>
+                    <p class="demo-feature">Layer 1 · Post văn bản · MC-073 · CR-001</p>
+                    <h3>Đe doạ người tư vấn</h3>
+                  </div>
+                  <span class="chip chip-danger">Layer 1 reject</span>
                 </div>
-                <span class="section-index">02</span>
-              </div>
-              <div class="demo-steps">
-                <article class="demo-step">
+                <dl class="demo-facts">
                   <div>
-                    <h3>Auth &amp; RBAC</h3>
-                    <p><strong>Role:</strong> Customer</p>
-                    <p>
-                      Đăng ký Customer giả lập mới, đăng nhập rồi thử truy cập khu vực Admin và
-                      Moderator.
-                    </p>
+                    <dt>Tiêu đề test</dt>
+                    <dd>Đe doạ người tư vấn</dd>
                   </div>
-                  <div class="expected-box">
-                    <strong>Kết quả mong đợi</strong>
-                    <p>
-                      Customer dùng được chức năng được cấp; bề mặt quản trị bị chặn tại server.
-                    </p>
-                  </div>
-                </article>
-                <article class="demo-step">
                   <div>
-                    <h3>Tạo Post</h3>
-                    <p><strong>Role:</strong> Customer</p>
-                    <p>
-                      Chọn Topic active, tạo Post text hợp lệ và có thể đính kèm một ảnh an toàn.
-                    </p>
+                    <dt>Nội dung test</dt>
+                    <dd>
+                      Một lời đe doạ bạo lực trực tiếp nhắm vào người đang tư vấn trong diễn đàn.
+                    </dd>
                   </div>
-                  <div class="expected-box">
-                    <strong>Kết quả mong đợi</strong>
-                    <p>Post nhận trạng thái moderation và chưa public trước human approval.</p>
-                  </div>
-                </article>
-                <article class="demo-step">
                   <div>
-                    <h3>Thêm Comment</h3>
-                    <p><strong>Role:</strong> Customer</p>
-                    <p>Mở Post seed đã public, gửi Comment sạch rồi tải lại trang.</p>
+                    <dt>Thao tác</dt>
+                    <dd>
+                      Tạo Post văn bản trong <code>TOP-001</code> bằng tài khoản Customer demo.
+                    </dd>
                   </div>
-                  <div class="expected-box">
-                    <strong>Kết quả mong đợi</strong>
-                    <p>Comment sạch được hiển thị; Comment không sử dụng quota Post.</p>
-                  </div>
-                </article>
-                <article class="demo-step">
-                  <div>
-                    <h3>AI + Moderator</h3>
-                    <p><strong>Role:</strong> Moderator</p>
-                    <p>Mở queue, duyệt Post đang chờ rồi kiểm tra lại trạng thái bằng Customer.</p>
-                  </div>
-                  <div class="expected-box">
-                    <strong>Kết quả mong đợi</strong>
-                    <p>Chỉ Moderator quyết định xuất bản; audit có AI log và human attribution.</p>
-                  </div>
-                </article>
-                <article class="demo-step">
-                  <div>
-                    <h3>Trending</h3>
-                    <p><strong>Role:</strong> Admin</p>
-                    <p>Mở dashboard và chuyển giữa rolling window 24 giờ và 7 ngày.</p>
-                  </div>
-                  <div class="expected-box">
-                    <strong>Kết quả mong đợi</strong>
-                    <p>Tối đa năm nhóm thực có, chỉ tính nội dung public trong cửa sổ thời gian.</p>
-                  </div>
-                </article>
-              </div>
-            </section>
-
-            <section class="section">
-              <div class="section-head">
-                <div>
-                  <p class="section-kicker">Fallback</p>
-                  <h2>Khi không có OpenAI live</h2>
-                  <p class="section-copy">
-                    Không nhập key giữa buổi demo và không trình bày deterministic result như live
-                    AI result.
-                  </p>
-                </div>
-                <span class="section-index">03</span>
-              </div>
-              <div class="grid-main-aside">
-                <article class="card card-pad">
-                  <div class="card-head">
-                    <div>
-                      <h3>Evidence thay thế</h3>
-                      <p>Provider-free + dry-run</p>
-                    </div>
-                    <span class="chip chip-info">No key</span>
-                  </div>
-                  <pre class="command">
-npm run test:e2e:provider-free
-npm run moderation:test -- eval --dry-run</pre>
-                </article>
-                <article class="card card-pad">
-                  <div class="card-head">
-                    <div>
-                      <h3>Điểm nói bắt buộc</h3>
-                      <p>Giữ provenance trung thực</p>
-                    </div>
-                  </div>
-                  <ul class="insight-list">
-                    <li class="insight-item">
-                      <span class="item-index">01</span>
-                      <div>
-                        <p class="item-title">Dùng seed cho feed và audit</p>
-                        <p class="item-copy">
-                          Không submit content mới khi provider không sẵn sàng.
-                        </p>
-                      </div>
-                    </li>
-                    <li class="insight-item">
-                      <span class="item-index">02</span>
-                      <div>
-                        <p class="item-title">Trending dùng E2E artifact</p>
-                        <p class="item-copy">Không gọi endpoint dev nếu provider unavailable.</p>
-                      </div>
-                    </li>
-                    <li class="insight-item">
-                      <span class="item-index">03</span>
-                      <div>
-                        <p class="item-title">Nêu rõ loại evidence</p>
-                        <p class="item-copy">
-                          Deterministic là test evidence, không phải live model result.
-                        </p>
-                      </div>
-                    </li>
-                  </ul>
-                </article>
-              </div>
-            </section>
-
-            <section class="section">
-              <div class="note danger">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.8"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  aria-hidden="true"
-                >
-                  <path d="M12 3 2.8 20h18.4L12 3Z"></path>
-                  <path d="M12 9v5M12 17h.01"></path>
-                </svg>
-                <div>
-                  <strong>Giới hạn buổi demo</strong>
+                </dl>
+                <div class="demo-outcome">
+                  <strong>Expected</strong>
                   <p>
-                    Không xóa Post public, không xóa Topic vĩnh viễn, không FLUSHALL Redis dùng
-                    chung và không chạy scratch-debug.ts.
+                    Layer 1 flag nội dung an toàn nền tảng và short-circuit: Post bị reject, không
+                    gọi Layer 2 và không hiển thị public.
                   </p>
                 </div>
+              </article>
+
+              <article class="card demo-case demo-case-image demo-case-priority-image">
+                <figure>
+                  <img
+                    src="assets/demo-images/MC-019-id-card.jpg"
+                    alt="Giấy tờ định danh mô phỏng có thông tin chưa che"
+                    loading="lazy"
+                  />
+                  <figcaption>Fixture MC-019 · ảnh tổng hợp</figcaption>
+                </figure>
+                <div class="demo-case-head">
+                  <span class="demo-case-no">02</span>
+                  <div>
+                    <p class="demo-feature">Layer 1 ảnh → Layer 2 · Post ảnh · MC-019 · CR-004</p>
+                    <h3>Ảnh đính kèm</h3>
+                  </div>
+                  <span class="chip chip-danger">Reject</span>
+                </div>
+                <dl class="demo-facts">
+                  <div>
+                    <dt>Tiêu đề test</dt>
+                    <dd>Ảnh đính kèm</dd>
+                  </div>
+                  <div>
+                    <dt>Nội dung test</dt>
+                    <dd>“Nhờ mọi người xem giúp.” Ảnh mô phỏng chứa giấy tờ định danh chưa che.</dd>
+                  </div>
+                </dl>
+                <div class="demo-outcome">
+                  <strong>Expected flow</strong>
+                  <p>
+                    Layer 1 luôn quét ảnh trước. Fixture này đi tiếp Layer 2 và bị reject theo
+                    <code>CR-004</code>; bộ 115 case hiện không có ảnh nào short-circuit tại Layer
+                    1.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="section" aria-labelledby="topic-cases-title">
+            <div class="section-head">
+              <div>
+                <p class="section-kicker">Nhóm 2 · Topic suggestion</p>
+                <h2 id="topic-cases-title">Gợi ý đúng chỗ, không tự đổi nội dung</h2>
+                <p class="section-copy">
+                  Dùng hai tình huống đối lập: cần sửa Topic và nên giữ nguyên Topic.
+                </p>
               </div>
-            </section>
-            <footer class="footer-note">
-              <span>VF Forum · Báo cáo tĩnh dành cho quản lý &amp; mentor</span>
-              <span>Snapshot 2026-08-14 · Không chứa secrets hoặc dữ liệu cá nhân thật</span>
-            </footer>
-          </main>
-        </div>
+              <span class="section-index">03</span>
+            </div>
+            <div class="demo-case-grid">
+              <article class="card demo-case">
+                <div class="demo-case-head">
+                  <span class="demo-case-no">03</span>
+                  <div>
+                    <p class="demo-feature">Topic suggestion · TS-002</p>
+                    <h3>Sức khỏe pin đang đặt nhầm Topic</h3>
+                  </div>
+                  <span class="chip chip-info">Đề xuất đổi</span>
+                </div>
+                <dl class="demo-facts">
+                  <div>
+                    <dt>Tiêu đề test</dt>
+                    <dd>SOH VF 8 giảm còn 93%</dd>
+                  </div>
+                  <div>
+                    <dt>Nội dung test</dt>
+                    <dd>
+                      Xe đã chạy 20.000 km; người đăng muốn kiểm tra suy giảm pin và thông số cần
+                      xem.
+                    </dd>
+                  </div>
+                  <div>
+                    <dt>Topic đang chọn</dt>
+                    <dd><code>TOP-001</code> · Trải nghiệm sử dụng.</dd>
+                  </div>
+                  <div>
+                    <dt>Thao tác</dt>
+                    <dd>Nhập tiêu đề và nội dung, giữ Topic hiện tại rồi gửi để nhận gợi ý.</dd>
+                  </div>
+                </dl>
+                <div class="demo-outcome">
+                  <strong>Expected</strong>
+                  <p>
+                    Gợi ý <code>TOP-005</code> (Pin &amp; phạm vi hoạt động); người đăng tự xác nhận
+                    hoặc giữ Topic cũ.
+                  </p>
+                </div>
+              </article>
+
+              <article class="card demo-case">
+                <div class="demo-case-head">
+                  <span class="demo-case-no">04</span>
+                  <div>
+                    <p class="demo-feature">Topic suggestion · TS-019</p>
+                    <h3>Wallbox ban đêm là ca ranh giới</h3>
+                  </div>
+                  <span class="chip chip-pass">Giữ nguyên</span>
+                </div>
+                <dl class="demo-facts">
+                  <div>
+                    <dt>Tiêu đề test</dt>
+                    <dd>Sạc overnight ở home wallbox</dd>
+                  </div>
+                  <div>
+                    <dt>Nội dung test</dt>
+                    <dd>Có nên đặt giới hạn 80% khi dùng wallbox mỗi đêm không?</dd>
+                  </div>
+                  <div>
+                    <dt>Topic đang chọn</dt>
+                    <dd><code>TOP-002</code> · Trạm &amp; hạ tầng sạc.</dd>
+                  </div>
+                  <div>
+                    <dt>Thao tác</dt>
+                    <dd>Gửi nội dung với Topic hiện tại và kiểm tra khu vực gợi ý.</dd>
+                  </div>
+                </dl>
+                <div class="demo-outcome">
+                  <strong>Expected</strong>
+                  <p>
+                    Không đề xuất đổi Topic: nội dung liên quan cả sạc tại nhà và sức khỏe pin nhưng
+                    <code>TOP-002</code> vẫn hợp lệ.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="section" aria-labelledby="text-cases-title">
+            <div class="section-head">
+              <div>
+                <p class="section-kicker">Nhóm 3 · Post &amp; Comment văn bản</p>
+                <h2 id="text-cases-title">Phân biệt đóng góp hữu ích và nội dung cần chặn</h2>
+                <p class="section-copy">
+                  Một Post cùng hai Comment cho thấy cách Layer 2 phân biệt đóng góp hữu ích và nội
+                  dung công kích sau checkpoint Layer 1 ở trên.
+                </p>
+              </div>
+              <span class="section-index">04</span>
+            </div>
+            <div class="demo-case-grid">
+              <article class="card demo-case">
+                <div class="demo-case-head">
+                  <span class="demo-case-no">05</span>
+                  <div>
+                    <p class="demo-feature">Post văn bản · MC-001 · CR-001</p>
+                    <h3>Ghế sau hơi chật khi chở 3 người lớn</h3>
+                  </div>
+                  <span class="chip chip-pass">Approve</span>
+                </div>
+                <dl class="demo-facts">
+                  <div>
+                    <dt>Tiêu đề test</dt>
+                    <dd>Ghế sau hơi chật khi chở 3 người lớn</dd>
+                  </div>
+                  <div>
+                    <dt>Nội dung test</dt>
+                    <dd>
+                      Mình dùng VF 5 được 8 tháng, thấy ghế sau hơi chật khi chở ba người lớn.
+                    </dd>
+                  </div>
+                  <div>
+                    <dt>Thao tác</dt>
+                    <dd>Tạo Post trong <code>TOP-001</code> với vai trò Customer.</dd>
+                  </div>
+                </dl>
+                <div class="demo-outcome">
+                  <strong>Expected</strong>
+                  <p>
+                    Post được approve và có thể xuất hiện trong luồng thảo luận; nhận xét sản phẩm
+                    không công kích cá nhân.
+                  </p>
+                </div>
+              </article>
+
+              <article class="card demo-case">
+                <div class="demo-case-head">
+                  <span class="demo-case-no">06</span>
+                  <div>
+                    <p class="demo-feature">Comment · MC-042 · CR-001</p>
+                    <h3>Comment cho bài hỏi mẹo lái xe an toàn</h3>
+                  </div>
+                  <span class="chip chip-pass">Approve</span>
+                </div>
+                <dl class="demo-facts">
+                  <div>
+                    <dt>Tiêu đề test</dt>
+                    <dd>Comment cho bài hỏi mẹo lái xe an toàn trong phố</dd>
+                  </div>
+                  <div>
+                    <dt>Nội dung test</dt>
+                    <dd>
+                      Bạn có thể thử đi chậm hơn ở đoạn đông người, mình thấy cách đó khá hiệu quả.
+                    </dd>
+                  </div>
+                  <div>
+                    <dt>Thao tác</dt>
+                    <dd>Thêm Comment vào Post hỏi mẹo lái xe trong phố.</dd>
+                  </div>
+                </dl>
+                <div class="demo-outcome">
+                  <strong>Expected</strong>
+                  <p>
+                    Comment được approve và hiện dưới Post; nội dung xây dựng, liên quan trực tiếp
+                    câu hỏi gốc.
+                  </p>
+                </div>
+              </article>
+
+              <article class="card demo-case">
+                <div class="demo-case-head">
+                  <span class="demo-case-no">07</span>
+                  <div>
+                    <p class="demo-feature">Comment · MC-043 · CR-001</p>
+                    <h3>Comment cho bài về xe EV đã qua sử dụng</h3>
+                  </div>
+                  <span class="chip chip-danger">Reject</span>
+                </div>
+                <dl class="demo-facts">
+                  <div>
+                    <dt>Tiêu đề test</dt>
+                    <dd>Comment cho bài về việc mua xe điện VinFast đã qua sử dụng</dd>
+                  </div>
+                  <div>
+                    <dt>Nội dung test</dt>
+                    <dd>
+                      Comment tiếng Anh phủ định, miệt thị trực tiếp lời khuyên của thành viên khác.
+                    </dd>
+                  </div>
+                  <div>
+                    <dt>Thao tác</dt>
+                    <dd>Gửi vào Post trao đổi về việc mua xe điện VinFast đã qua sử dụng.</dd>
+                  </div>
+                </dl>
+                <div class="demo-outcome">
+                  <strong>Expected</strong>
+                  <p>
+                    Comment bị reject theo <code>CR-001</code>, không xuất hiện dưới Post công khai.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="section" aria-labelledby="image-cases-title">
+            <div class="section-head">
+              <div>
+                <p class="section-kicker">Nhóm 4 · Post có ảnh</p>
+                <h2 id="image-cases-title">Moderation đọc cả caption lẫn ảnh đính kèm</h2>
+                <p class="section-copy">
+                  Ba fixture ảnh còn lại cho thấy rõ cả hai kết quả approve/reject sau khi ảnh đã
+                  qua checkpoint Layer 1.
+                </p>
+              </div>
+              <span class="section-index">05</span>
+            </div>
+            <div class="demo-case-grid demo-case-grid-images">
+              <article class="card demo-case demo-case-image">
+                <figure>
+                  <img
+                    src="assets/demo-images/MC-056-courteous-road.jpg"
+                    alt="Minh họa hai xe nhường đường lịch sự"
+                    loading="lazy"
+                  />
+                  <figcaption>Fixture MC-056 · ảnh tổng hợp</figcaption>
+                </figure>
+                <div class="demo-case-head">
+                  <span class="demo-case-no">08</span>
+                  <div>
+                    <p class="demo-feature">Post ảnh · MC-056 · CR-001</p>
+                    <h3>Ảnh hướng dẫn lịch sự</h3>
+                  </div>
+                  <span class="chip chip-pass">Approve</span>
+                </div>
+                <dl class="demo-facts">
+                  <div>
+                    <dt>Tiêu đề test</dt>
+                    <dd>Ảnh hướng dẫn lịch sự</dd>
+                  </div>
+                  <div>
+                    <dt>Nội dung test</dt>
+                    <dd>Một mẹo nhỏ khi nhường đường.</dd>
+                  </div>
+                </dl>
+                <div class="demo-outcome">
+                  <strong>Expected</strong>
+                  <p>
+                    Ảnh có ứng xử văn minh, không chứa định danh hay công kích; Post được approve.
+                  </p>
+                </div>
+              </article>
+
+              <article class="card demo-case demo-case-image">
+                <figure>
+                  <img
+                    src="assets/demo-images/MC-009-ad-poster.jpg"
+                    alt="Poster quảng cáo dịch vụ với lời mời mua"
+                    loading="lazy"
+                  />
+                  <figcaption>Fixture MC-009 · ảnh tổng hợp</figcaption>
+                </figure>
+                <div class="demo-case-head">
+                  <span class="demo-case-no">09</span>
+                  <div>
+                    <p class="demo-feature">Post ảnh · MC-009 · CR-002</p>
+                    <h3>Ảnh đính kèm</h3>
+                  </div>
+                  <span class="chip chip-danger">Reject</span>
+                </div>
+                <dl class="demo-facts">
+                  <div>
+                    <dt>Tiêu đề test</dt>
+                    <dd>Ảnh đính kèm</dd>
+                  </div>
+                  <div>
+                    <dt>Nội dung test</dt>
+                    <dd>Nhờ mọi người xem giúp. Ảnh là poster chào mời thương mại.</dd>
+                  </div>
+                </dl>
+                <div class="demo-outcome">
+                  <strong>Expected</strong>
+                  <p>
+                    Caption sạch không làm thay đổi nội dung quảng cáo trong ảnh; Post bị reject
+                    theo <code>CR-002</code>.
+                  </p>
+                </div>
+              </article>
+
+              <article class="card demo-case demo-case-image">
+                <figure>
+                  <img
+                    src="assets/demo-images/MC-017-redacted-screenshot.jpg"
+                    alt="Ảnh chụp màn hình lỗi sạc đã che thông tin định danh"
+                    loading="lazy"
+                  />
+                  <figcaption>Fixture MC-017 · ảnh tổng hợp</figcaption>
+                </figure>
+                <div class="demo-case-head">
+                  <span class="demo-case-no">10</span>
+                  <div>
+                    <p class="demo-feature">Post ảnh · MC-017 · CR-004</p>
+                    <h3>Nhờ hỗ trợ lỗi sạc</h3>
+                  </div>
+                  <span class="chip chip-pass">Approve</span>
+                </div>
+                <dl class="demo-facts">
+                  <div>
+                    <dt>Tiêu đề test</dt>
+                    <dd>Nhờ hỗ trợ lỗi sạc</dd>
+                  </div>
+                  <div>
+                    <dt>Nội dung test</dt>
+                    <dd>
+                      Ứng dụng báo lỗi sạc; biển số và tên tài khoản đã được che trước khi đăng.
+                    </dd>
+                  </div>
+                </dl>
+                <div class="demo-outcome">
+                  <strong>Expected</strong>
+                  <p>
+                    Thông tin định danh đã được redaction rõ ràng; Post có thể được approve theo
+                    <code>CR-004</code>.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="section">
+            <div class="note danger">
+              <div>
+                <strong>Lưu ý khi demo trên môi trường dùng chung</strong>
+                <p>
+                  Chỉ quan sát fixture seed hoặc sử dụng database disposable khi cần bấm
+                  approve/reject. Không dùng ảnh người thật, không đưa thông tin cá nhân vào form và
+                  không thay đổi trạng thái dữ liệu demo chung.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <footer class="footer-note">
+            <span>VF Forum · Demo case dành cho quản lý &amp; mentor</span>
+            <span
+              >Snapshot 2026-08-14 · Ảnh là fixture tổng hợp, không phải dữ liệu người dùng</span
+            >
+          </footer>
+        </main>
       </div>
     </div>
   </body>

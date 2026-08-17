@@ -13,6 +13,7 @@ docs/artifact/
 ├── index.html
 ├── product.html
 ├── architecture.html
+├── future-features.html
 ├── reports/
 │   ├── moderation.html
 │   ├── moderation-cases.html
@@ -20,18 +21,24 @@ docs/artifact/
 │   ├── automated-tests.html
 │   └── e2e-quality.html
 └── assets/
-    └── styles.css
+    ├── styles.css
+    └── demo-images/          # 4 ảnh fixture tổng hợp cho Demo cases
 ```
 
 ## Trang lưu trữ không liên kết từ menu
 
 - `progress.html`
 - `reports/topic-suggestion.html`
-- `demo.html`
 - `slides.html`
 
 ## Nội dung dữ liệu
 
+- `demo.html` là catalog gồm 10 case trình bày: Topic suggestion, Post văn bản, 2 Comment và
+  4 Post có ảnh. Ảnh trong `assets/demo-images/` là fixture tổng hợp từ test suite, không phải
+  dữ liệu người dùng thật.
+
+- [FEATURES.md](./FEATURES.md) tóm tắt tính năng, luồng hoạt động và công nghệ của ứng dụng.
+- `future-features.html` là roadmap đề xuất ngoài MVP; không mô tả tính năng đã hoàn tất.
 - Trang `moderation-cases.html` hiển thị sẵn đủ 115 cases trong chính file HTML; chỉ mở một case
   khi cần xem thêm nội dung và rationale.
 - `reports/langfuse-live-115.html` tóm tắt lần eval 115 cases: độ phù hợp, độ trễ, chi phí ghi
@@ -44,4 +51,3 @@ docs/artifact/
 - Dataset là self-reviewed và chưa được tuyên bố mentor-approved.
 
 Khi số liệu nguồn thay đổi, cần tạo lại hoặc sửa nội dung HTML trước khi chia sẻ snapshot mới.
-# docs-forum
