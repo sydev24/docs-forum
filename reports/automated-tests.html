@@ -147,7 +147,7 @@
           </nav>
           <div class="sidebar-footer">
             <strong>Báo cáo tĩnh · Sprint 3</strong>
-            Dữ liệu khóa ngày 2026-08-14
+            Test tự động chạy lại ngày 2026-08-21
           </div>
         </aside>
 
@@ -297,14 +297,14 @@
               ><b>Unit &amp; Integration</b>
             </div>
             <div class="topbar-meta">
-              <span class="live-dot"></span><span>SNAPSHOT · 2026-08-14</span>
+              <span class="live-dot"></span><span>CHẠY LẠI · 2026-08-21</span>
             </div>
           </div>
           <main class="content" id="main-content">
             <header class="page-head">
               <div class="page-head-copy">
                 <p class="eyebrow">Deterministic evidence</p>
-                <h1>842 tests bảo vệ các luồng quan trọng.</h1>
+                <h1>944 tests bảo vệ các luồng quan trọng.</h1>
                 <p class="lede">Unit và integration kiểm tra logic độc lập với live AI provider.</p>
               </div>
               <div class="actions">
@@ -341,7 +341,7 @@
                       <path d="M7 14h10M8 3h8"></path></svg
                   ></span>
                 </div>
-                <div class="kpi-value">80/80</div>
+                <div class="kpi-value">84/84</div>
                 <div class="kpi-sub">Tất cả file PASS</div>
               </article>
 
@@ -361,8 +361,8 @@
                       <path d="m4 12 5 5L20 6"></path></svg
                   ></span>
                 </div>
-                <div class="kpi-value">842/842</div>
-                <div class="kpi-sub">Deterministic mới nhất · 14/08</div>
+                <div class="kpi-value">944/944</div>
+                <div class="kpi-sub">Chạy lại · 21/08</div>
               </article>
 
               <article class="card kpi-card">
@@ -382,7 +382,7 @@
                       <path d="m7 16 4-5 4 3 5-8"></path></svg
                   ></span>
                 </div>
-                <div class="kpi-value">90,78%</div>
+                <div class="kpi-value">92,06%</div>
                 <div class="kpi-sub">Branches · vượt ngưỡng 90%</div>
               </article>
 
@@ -420,28 +420,32 @@
               </div>
               <div class="grid-4">
                 <article class="card feature-card">
-                  <div class="feature-no">01 · PASS</div>
+                  <div class="feature-no">01 · PASS 21/08</div>
                   <h3>Unit</h3>
                   <p>Hàm thuần, validation, auth/authz, state machine và component UI</p>
                 </article>
                 <article class="card feature-card">
-                  <div class="feature-no">02 · PASS</div>
+                  <div class="feature-no">02 · PASS 21/08</div>
                   <h3>Integration</h3>
                   <p>
                     Route/service, transaction, moderation apply, event, ảnh, retention và Admin API
                   </p>
                 </article>
                 <article class="card feature-card">
-                  <div class="feature-no">03 · PASS</div>
+                  <div class="feature-no">03 · HISTORICAL</div>
                   <h3>E2E</h3>
                   <p>
-                    Luồng người dùng thật qua UI/API, RBAC, queue, correction, Trending và Admin IA
+                    Luồng người dùng thật qua UI/API, RBAC, queue, correction, Trending và Admin IA.
+                    Xem ngày checkpoint và việc chạy lại ở trang E2E &amp; gates.
                   </p>
                 </article>
                 <article class="card feature-card">
-                  <div class="feature-no">04 · PASS</div>
+                  <div class="feature-no">04 · HISTORICAL</div>
                   <h3>AI Eval</h3>
-                  <p>Đo model/prompt trên dataset gắn nhãn riêng cho moderation</p>
+                  <p>
+                    Đo model/prompt trên dataset gắn nhãn riêng cho moderation; evidence official
+                    gần nhất là 12/08.
+                  </p>
                 </article>
               </div>
             </section>
@@ -462,38 +466,38 @@
                   <div class="card-head">
                     <div>
                       <h3>Coverage checkpoint</h3>
-                      <p>841/841 tests · 13/08</p>
+                      <p>944/944 tests · chạy lại 21/08</p>
                     </div>
                     <span class="chip chip-pass">PASS</span>
                   </div>
                   <div class="bar-list">
                     <div class="bar-row">
                       <span class="bar-label">Statements</span>
-                      <span class="bar-track"
-                        ><span class="bar-fill good" style="--value: 95%"></span
+                      <span class="bar-track has-target"
+                        ><span class="bar-fill good" style="--value: 95.4%"></span
                       ></span>
-                      <span class="bar-value">95%</span>
+                      <span class="bar-value">95,40%</span>
                     </div>
                     <div class="bar-row">
                       <span class="bar-label">Branches</span>
-                      <span class="bar-track"
-                        ><span class="bar-fill good" style="--value: 90.78%"></span
+                      <span class="bar-track has-target"
+                        ><span class="bar-fill good" style="--value: 92.06%"></span
                       ></span>
-                      <span class="bar-value">90,8%</span>
+                      <span class="bar-value">92,06%</span>
                     </div>
                     <div class="bar-row">
                       <span class="bar-label">Functions</span>
-                      <span class="bar-track"
-                        ><span class="bar-fill good" style="--value: 96.68%"></span
+                      <span class="bar-track has-target"
+                        ><span class="bar-fill good" style="--value: 96.39%"></span
                       ></span>
-                      <span class="bar-value">96,7%</span>
+                      <span class="bar-value">96,39%</span>
                     </div>
                     <div class="bar-row">
                       <span class="bar-label">Lines</span>
-                      <span class="bar-track"
-                        ><span class="bar-fill good" style="--value: 95.91%"></span
+                      <span class="bar-track has-target"
+                        ><span class="bar-fill good" style="--value: 96.19%"></span
                       ></span>
-                      <span class="bar-value">95,9%</span>
+                      <span class="bar-value">96,19%</span>
                     </div>
                   </div>
                 </article>
@@ -597,7 +601,10 @@ npx vitest run tests/integration</pre>
             </section>
             <footer class="footer-note">
               <span>VF Forum · Báo cáo tĩnh dành cho quản lý &amp; mentor</span>
-              <span>Snapshot 2026-08-14 · Không chứa secrets hoặc dữ liệu cá nhân thật</span>
+              <span
+                >Test tự động chạy lại 2026-08-21 · Không chứa secrets hoặc dữ liệu cá nhân
+                thật</span
+              >
             </footer>
           </main>
         </div>

@@ -297,7 +297,7 @@
               ><b>E2E &amp; Quality Gates</b>
             </div>
             <div class="topbar-meta">
-              <span class="live-dot"></span><span>SNAPSHOT · 2026-08-14</span>
+              <span class="live-dot"></span><span>EVIDENCE THEO TỪNG MỐC · 12–21/08</span>
             </div>
           </div>
           <main class="content" id="main-content">
@@ -306,7 +306,7 @@
                 <p class="eyebrow">Browser &amp; static gates</p>
                 <h1>Luồng người dùng và quality gate đều có evidence.</h1>
                 <p class="lede">
-                  E2E, build, schema và lint được phân loại theo trạng thái thực tế.
+                  Mỗi gate được gắn rõ ngày chạy để không nhầm evidence mới với checkpoint lịch sử.
                 </p>
               </div>
               <div class="actions"></div>
@@ -317,7 +317,8 @@
                   <p class="section-kicker">Quality gates</p>
                   <h2>Bảng trạng thái bàn giao</h2>
                   <p class="section-copy">
-                    Historical không được trình bày như một lượt chạy lại trên worktree mới nhất.
+                    Xanh lá là đã chạy lại; xanh dương là checkpoint lịch sử; vàng là việc phải
+                    chốt.
                   </p>
                 </div>
                 <span class="section-index">01</span>
@@ -336,57 +337,72 @@
                     <tbody>
                       <tr>
                         <td><strong>Vitest deterministic</strong></td>
-                        <td class="number-cell">842/842 tests</td>
+                        <td class="number-cell">944/944 tests</td>
                         <td><span class="chip chip-pass">PASS</span></td>
-                        <td>80/80 files · hiện hành 14/08</td>
+                        <td>84/84 files · chạy lại 21/08</td>
                       </tr>
                       <tr>
                         <td><strong>Coverage checkpoint</strong></td>
-                        <td class="number-cell">841/841 tests</td>
+                        <td class="number-cell">944/944 tests</td>
                         <td><span class="chip chip-pass">PASS</span></td>
-                        <td>13/08 · S 95,00% · B 90,78% · F 96,68% · L 95,91%</td>
+                        <td>21/08 · S 95,40% · B 92,06% · F 96,39% · L 96,19%</td>
                       </tr>
                       <tr>
-                        <td><strong>Chromium refinement</strong></td>
+                        <td><strong>Chromium refinement (historical)</strong></td>
                         <td class="number-cell">14/14</td>
-                        <td><span class="chip chip-pass">PASS</span></td>
+                        <td><span class="chip chip-info">HISTORICAL</span></td>
                         <td>Provider-free · checkpoint 13/08, chưa rerun sau UI/Home cuối</td>
                       </tr>
                       <tr>
-                        <td><strong>Full Chromium</strong></td>
-                        <td class="number-cell">30/30</td>
-                        <td><span class="chip chip-pass">PASS</span></td>
-                        <td>Provider-free · Sprint 3 core checkpoint</td>
+                        <td><strong>Full Chromium (historical)</strong></td>
+                        <td class="number-cell">33/33</td>
+                        <td><span class="chip chip-info">HISTORICAL</span></td>
+                        <td>Provider-free · checkpoint 14/08, chưa rerun sau Comment refinement</td>
                       </tr>
                       <tr>
                         <td><strong>Moderation fixture</strong></td>
                         <td class="number-cell">24/24 JPEG</td>
-                        <td><span class="chip chip-pass">PASS</span></td>
-                        <td>Safe synthetic fixtures</td>
+                        <td><span class="chip chip-info">HISTORICAL</span></td>
+                        <td>Safe synthetic fixtures · checkpoint 14/08</td>
                       </tr>
                       <tr>
                         <td><strong>Moderation dry-run</strong></td>
                         <td class="number-cell">115/115</td>
-                        <td><span class="chip chip-pass">PASS</span></td>
-                        <td>Không gọi live API</td>
+                        <td><span class="chip chip-info">HISTORICAL</span></td>
+                        <td>Không gọi live API · checkpoint 14/08</td>
                       </tr>
                       <tr>
                         <td><strong>Typecheck / lint / format</strong></td>
                         <td class="number-cell">PASS</td>
                         <td><span class="chip chip-pass">PASS</span></td>
-                        <td>Checkpoint hiện hành</td>
+                        <td>PASS · chạy lại 21/08</td>
                       </tr>
                       <tr>
-                        <td><strong>Contract / Prisma</strong></td>
+                        <td><strong>Contract lint</strong></td>
                         <td class="number-cell">PASS</td>
                         <td><span class="chip chip-pass">PASS</span></td>
-                        <td>OpenAPI 3.1 + AI schemas</td>
+                        <td>OpenAPI 3.1 + AI schemas · chạy lại 21/08</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Prisma validate</strong></td>
+                        <td class="number-cell">PASS</td>
+                        <td><span class="chip chip-info">HISTORICAL</span></td>
+                        <td>Checkpoint 14/08 · T169 yêu cầu chạy lại sau Comment refinement</td>
                       </tr>
                       <tr>
                         <td><strong>Production build</strong></td>
                         <td class="number-cell">PASS</td>
-                        <td><span class="chip chip-pass">PASS</span></td>
-                        <td>Checkpoint hiện hành 14/08</td>
+                        <td><span class="chip chip-info">HISTORICAL</span></td>
+                        <td>Checkpoint 14/08 · cần rerun sau thay đổi source</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Comment refinement verification</strong></td>
+                        <td class="number-cell">T169</td>
+                        <td><span class="chip chip-warn">OPEN</span></td>
+                        <td>
+                          Chờ full verification, E2E US3 và quickstart cases; SC-002/SC-010 chưa
+                          đóng lại
+                        </td>
                       </tr>
                       <tr>
                         <td><strong>Langfuse live smoke</strong></td>
@@ -426,9 +442,9 @@
                   <p>Auth, Post, Comment, queue, Trending và RBAC với OpenAI key rỗng.</p>
                 </article>
                 <article class="card feature-card">
-                  <div class="feature-no">LATEST REFINEMENT</div>
-                  <h3>14/14 Chromium</h3>
-                  <p>Admin IA, Overview, History, Topics và Moderator queue trên desktop/mobile.</p>
+                  <div class="feature-no">HISTORICAL · 14/08</div>
+                  <h3>33/33 Chromium</h3>
+                  <p>Provider-free full E2E; chưa phải rerun sau Comment refinement 21/08.</p>
                 </article>
               </div>
             </section>
@@ -500,16 +516,19 @@
                 <div>
                   <strong>Độ mới của evidence</strong>
                   <p>
-                    Deterministic tests và production build có checkpoint hiện hành ngày 14/08.
-                    Coverage và Chromium vẫn dùng checkpoint 13/08, chưa được trình bày như một lượt
-                    rerun sau các chỉnh sửa UI/Home cuối.
+                    Vitest, coverage, typecheck, lint, format và contract lint đã chạy lại 21/08.
+                    Chromium, Prisma validate, production build và live AI vẫn là evidence lịch sử;
+                    không được diễn giải là lượt rerun sau Comment refinement.
                   </p>
                 </div>
               </div>
             </section>
             <footer class="footer-note">
               <span>VF Forum · Báo cáo tĩnh dành cho quản lý &amp; mentor</span>
-              <span>Snapshot 2026-08-14 · Không chứa secrets hoặc dữ liệu cá nhân thật</span>
+              <span
+                >Static/test evidence 2026-08-21 · E2E/build/live evidence lịch sử · Không chứa
+                secrets hoặc dữ liệu cá nhân thật</span
+              >
             </footer>
           </main>
         </div>

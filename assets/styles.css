@@ -229,6 +229,11 @@ svg {
     transform 150ms ease;
 }
 
+/* Tạm ẩn roadmap ngoài MVP khỏi cả sidebar và menu mobile; giữ file để bật lại khi cần. */
+.nav-future {
+  display: none !important;
+}
+
 .nav-link:hover {
   border-color: #c9ddea;
   background: #edf5ff;
@@ -886,13 +891,29 @@ h3 {
 }
 
 .bar-track {
+  position: relative;
   height: 10px;
   overflow: hidden;
   border-radius: 999px;
   background: var(--paper-deep);
 }
 
+.bar-track.has-target::after {
+  position: absolute;
+  z-index: 2;
+  top: -2px;
+  bottom: -2px;
+  left: 90%;
+  width: 2px;
+  border-radius: 99px;
+  background: var(--warning);
+  content: '';
+}
+
 .bar-fill {
+  position: relative;
+  z-index: 1;
+  display: block;
   width: var(--value);
   height: 100%;
   border-radius: inherit;
@@ -908,9 +929,174 @@ h3 {
   background: var(--info);
 }
 
+.chart-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 18px;
+  margin: -7px 0 18px;
+  color: var(--ink-soft);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.chart-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.legend-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.legend-dot.expected,
+.comparison-fill.expected {
+  background: var(--info);
+}
+
+.legend-dot.actual,
+.comparison-fill.actual {
+  background: var(--success);
+}
+
+.comparison-list {
+  display: grid;
+  gap: 17px;
+}
+
+.comparison-row {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr) 54px;
+  align-items: center;
+  gap: 10px;
+}
+
+.comparison-label,
+.comparison-values {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.comparison-values {
+  color: var(--ink-soft);
+  text-align: right;
+}
+
+.comparison-bars {
+  display: grid;
+  gap: 5px;
+}
+
+.comparison-track {
+  display: block;
+  height: 7px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: var(--paper-deep);
+}
+
+.comparison-fill {
+  display: block;
+  width: var(--value);
+  height: 100%;
+  border-radius: inherit;
+  animation: grow-bar 700ms ease-out both;
+}
+
+.latency-chart {
+  display: grid;
+  grid-template-columns: 30px minmax(0, 1fr);
+  gap: 10px;
+  margin: 0;
+}
+
+.latency-scale {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 4px 0 37px;
+  color: var(--ink-soft);
+  font-size: 10px;
+  font-weight: 700;
+  text-align: right;
+}
+
+.latency-plot {
+  display: flex;
+  min-height: 202px;
+  align-items: stretch;
+  justify-content: space-around;
+  gap: 8px;
+  border-bottom: 1px solid var(--line);
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent calc(25% - 1px),
+    var(--paper-deep) calc(25% - 1px),
+    var(--paper-deep) 25%
+  );
+}
+
+.latency-column {
+  display: grid;
+  min-width: 0;
+  flex: 1;
+  grid-template-rows: minmax(0, 1fr) auto auto;
+  gap: 4px;
+  padding: 4px 0 7px;
+  color: var(--ink-soft);
+  font-size: 11px;
+  text-align: center;
+}
+
+.latency-column strong {
+  color: var(--ink);
+  font-size: 12px;
+}
+
+.latency-bar-area {
+  display: flex;
+  min-height: 0;
+  align-items: end;
+  justify-content: center;
+}
+
+.latency-bar {
+  width: min(28px, 66%);
+  height: var(--value);
+  min-height: 7px;
+  border-radius: 7px 7px 2px 2px;
+  background: var(--signal);
+  animation: grow-height 700ms ease-out both;
+}
+
+.latency-bar.good {
+  background: var(--success);
+}
+
+.latency-bar.info {
+  background: var(--info);
+}
+
+.chart-caption {
+  margin: 14px 0 0;
+  color: var(--ink-soft);
+  font-size: 12px;
+  line-height: 1.55;
+}
+
 @keyframes grow-bar {
   from {
     width: 0;
+  }
+}
+
+@keyframes grow-height {
+  from {
+    height: 0;
   }
 }
 

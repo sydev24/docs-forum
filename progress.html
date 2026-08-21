@@ -147,7 +147,7 @@
           </nav>
           <div class="sidebar-footer">
             <strong>Báo cáo tĩnh · Sprint 3</strong>
-            Dữ liệu khóa ngày 2026-08-14
+            Evidence phân mốc 12–21/08
           </div>
         </aside>
 
@@ -300,38 +300,45 @@
               ><b>Tiến độ dự án</b>
             </div>
             <div class="topbar-meta">
-              <span class="live-dot"></span><span>SNAPSHOT · 2026-08-14</span>
+              <span class="live-dot"></span><span>TRẠNG THÁI ĐỐI CHIẾU · 2026-08-21</span>
             </div>
           </div>
           <main class="content" id="main-content">
             <header class="page-head">
               <div class="page-head-copy">
-                <p class="eyebrow">Delivery status</p>
-                <h1>12/12 tiêu chí lõi đã hoàn tất.</h1>
-                <p class="lede">Các hạng mục còn mở được nêu riêng để trạng thái luôn minh bạch.</p>
+                <p class="eyebrow">Delivery status · current view</p>
+                <h1>10/12 tiêu chí đã xác minh; 2 tiêu chí cần chạy lại.</h1>
+                <p class="lede">
+                  Checkpoint 12/12 ngày 14/08 được giữ ở timeline; SC-002 và SC-010 được mở lại theo
+                  T169.
+                </p>
               </div>
               <div class="actions"></div>
             </header>
             <div class="note info" style="margin-top: 0">
-              <strong>Lưu trữ nội bộ</strong>
-              <p>Trang tiến độ không nằm trong menu hoặc snapshot báo cáo hiện hành.</p>
+              <strong>Trang đối chiếu nội bộ</strong>
+              <p>
+                Trang không nằm trong menu. Xanh là evidence đã có; vàng là cần xác minh lại hoặc
+                cần chốt.
+              </p>
             </div>
             <section class="signal-banner">
               <div class="signal-copy">
-                <p class="eyebrow">Acceptance closure</p>
-                <h2>Toàn bộ tiêu chí sản phẩm cốt lõi đã đạt.</h2>
+                <p class="eyebrow">Acceptance status</p>
+                <h2>Demo lõi có evidence; hai tiêu chí Comment cần evidence mới.</h2>
                 <p>
-                  Coverage gồm live AI evidence, provider-free browser evidence và deterministic
-                  test theo đúng trách nhiệm của từng lớp.
+                  Test tự động đã chạy lại 21/08. Full E2E, build và các case Comment hậu refinement
+                  vẫn phải hoàn tất trước khi đóng lại SC-002 và SC-010.
                 </p>
                 <div class="chip-row">
-                  <span class="chip chip-pass">12/12 criteria</span
-                  ><span class="chip">T099 complete</span><span class="chip">T124 follow-up</span>
+                  <span class="chip chip-pass">10/12 verified</span
+                  ><span class="chip chip-warn">2 cần xác minh lại</span
+                  ><span class="chip chip-warn">T124 / T169 mở</span>
                 </div>
               </div>
               <div class="signal-score">
-                <div class="score-number">12<span>/12</span></div>
-                <div class="score-label">Success criteria</div>
+                <div class="score-number">10<span>/12</span></div>
+                <div class="score-label">ĐÃ XÁC MINH</div>
               </div>
             </section>
 
@@ -360,15 +367,15 @@
                   <span class="criterion-code">SC-002</span>
                   <div>
                     <div class="criterion-title">Comment moderation</div>
-                    <div class="criterion-copy">Live + deterministic evidence</div>
+                    <div class="criterion-copy">Cần T169 full verification sau Comment refinement</div>
                   </div>
-                  <span class="status-dot" title="PASS"></span>
+                  <span class="status-dot open" title="Cần xác minh lại"></span>
                 </article>
                 <article class="criterion">
                   <span class="criterion-code">SC-003</span>
                   <div>
                     <div class="criterion-title">AI moderation quality</div>
-                    <div class="criterion-copy">113/115, mọi ngôn ngữ &gt; 90%</div>
+                    <div class="criterion-copy">113/115 strict; mọi ngôn ngữ &gt; 90%</div>
                   </div>
                   <span class="status-dot" title="PASS"></span>
                 </article>
@@ -424,9 +431,9 @@
                   <span class="criterion-code">SC-010</span>
                   <div>
                     <div class="criterion-title">5 Post/ngày</div>
-                    <div class="criterion-copy">Race, Redis, midnight</div>
+                    <div class="criterion-copy">Cần T169 replay, giới hạn ngày và E2E mới</div>
                   </div>
-                  <span class="status-dot" title="PASS"></span>
+                  <span class="status-dot open" title="Cần xác minh lại"></span>
                 </article>
                 <article class="criterion">
                   <span class="criterion-code">SC-011</span>
@@ -461,7 +468,15 @@
               </div>
               <div class="grid-3">
                 <article class="card feature-card">
-                  <div class="feature-no">T124</div>
+                  <div class="feature-no">T169 · OPEN</div>
+                  <h3>Xác minh Comment refinement</h3>
+                  <p>
+                    Chạy lại Prisma/contract/full Vitest/E2E/build và các quickstart case trước khi
+                    đóng SC-002, SC-010.
+                  </p>
+                </article>
+                <article class="card feature-card">
+                  <div class="feature-no">T124 · OPEN</div>
                   <h3>Langfuse live smoke</h3>
                   <p>
                     Xác minh trace ingestion, observation, usage, score và redaction bằng
@@ -469,19 +484,11 @@
                   </p>
                 </article>
                 <article class="card feature-card">
-                  <div class="feature-no">EVIDENCE</div>
-                  <h3>Khôi phục raw report 115</h3>
+                  <div class="feature-no">SCOPE</div>
+                  <h3>Chốt quyền đổi role Admin</h3>
                   <p>
-                    Cần bản sao ngoài repo hoặc một live run được cho phép nếu auditor yêu cầu
-                    actual result từng case.
-                  </p>
-                </article>
-                <article class="card feature-card">
-                  <div class="feature-no">VISUAL</div>
-                  <h3>Capture lại Admin screenshots</h3>
-                  <p>
-                    Ảnh Admin hiện có cũ hơn UI refinement; không dùng làm visual evidence hiện
-                    hành.
+                    Implementation có route đổi role, nhưng baseline User Directory mô tả chỉ-đọc;
+                    cần quyết định scope trước khi coi là acceptance.
                   </p>
                 </article>
               </div>
@@ -504,8 +511,8 @@
                   <article class="timeline-card">
                     <h3>12/08 · Official AI gates</h3>
                     <p>
-                      Moderation 113/115, topic suggestion 30/30, full Chromium 29/29 và production
-                      build 23/23 pages.
+                      Moderation strict 113/115, topic suggestion 30/30, full Chromium 29/29 và
+                      production build 23/23 pages.
                     </p>
                     <div class="timeline-meta">
                       <span class="chip chip-live">Live AI</span
@@ -533,8 +540,9 @@
                     <h3>13/08 · Admin IA refinement</h3>
                     <p>
                       Coverage checkpoint đạt 841/841; 14/14 Chromium cho Admin IA, Overview,
-                      History, Topics và Moderator queue. Deterministic mới nhất ngày 14/08 đạt
-                      842/842.
+                      History, Topics và Moderator queue. Checkpoint deterministic được ghi nhận
+                      ngày 14/08 đạt 855/855 trên 81 file; đây không phải khẳng định rerun trên thay
+                      đổi mới của working tree.
                     </p>
                     <div class="timeline-meta">
                       <span class="chip chip-pass">Coverage checkpoint</span
@@ -542,11 +550,28 @@
                     </div>
                   </article>
                 </div>
+                <div class="timeline-item">
+                  <div class="timeline-marker">NOW</div>
+                  <article class="timeline-card">
+                    <h3>21/08 · Automated verification refresh</h3>
+                    <p>
+                      84/84 files, 944/944 tests và coverage trên 90% đã chạy lại. T169 vẫn mở, nên
+                      SC-002 và SC-010 chưa được đóng lại.
+                    </p>
+                    <div class="timeline-meta">
+                      <span class="chip chip-pass">Fresh deterministic</span
+                      ><span class="chip chip-warn">2 criteria open</span>
+                    </div>
+                  </article>
+                </div>
               </div>
             </section>
             <footer class="footer-note">
               <span>VF Forum · Báo cáo tĩnh dành cho quản lý &amp; mentor</span>
-              <span>Snapshot 2026-08-14 · Không chứa secrets hoặc dữ liệu cá nhân thật</span>
+              <span
+                >Current view 2026-08-21 · Checkpoint lịch sử được giữ rõ ngày · Không chứa secrets
+                hoặc dữ liệu cá nhân thật</span
+              >
             </footer>
           </main>
         </div>

@@ -41,8 +41,13 @@ Người dùng (VI/EN)
   → mở đúng giao diện, API và dữ liệu được phép xem
 ```
 
-- Customer và Expert có thể tạo bài; Customer có thể bình luận ở Post công khai.
-- Moderator xử lý hàng chờ kiểm duyệt; Admin quản trị và xem audit.
+- Customer và Expert có thể tạo Post và Comment tại Post công khai; cả hai đều đi qua moderation.
+- Moderator xử lý hàng chờ kiểm duyệt; Admin quản trị và xem audit. Route đổi role đã được triển
+  khai, nhưng không thuộc baseline acceptance vì User Directory trong đặc tả được mô tả chỉ-đọc;
+  cần quyết định scope trước khi công bố như tính năng chính thức.
+- Nếu scope đổi role được phê duyệt: Admin không thể tự đổi role và không thể hạ cấp Admin cuối
+  cùng. Role mới được đọc lại từ DB ở request kế tiếp, nên có hiệu lực ngay sau khi cập nhật thành
+  công.
 - API không trả password hash, token hoặc email qua DTO công khai.
 - Công nghệ chính: `lib/auth/*`, Prisma `User`, JWT `jose`, bcryptjs, Route Handlers
   `/api/auth/*`.
@@ -91,8 +96,9 @@ Form Post + tối đa 3 ảnh
 **Mục đích:** cho phép thảo luận trên Post public, vẫn đi qua chính sách nội dung.
 
 ```text
-Customer gửi Comment vào Post public
-  → validate + lưu processing
+Customer hoặc Expert gửi Comment vào Post public
+  → bắt buộc Idempotency-Key, validate request và kiểm tra hạn chế bị từ chối trong ngày
+  → lưu/replay Comment processing một cách idempotent
   → Layer 1 safety và Layer 2 community policy
   ├─ approve → published
   ├─ reject → rejected
@@ -101,7 +107,10 @@ Customer gửi Comment vào Post public
 ```
 
 - Chỉ Comment `published` xuất hiện trong luồng public.
-- Tác giả xem trạng thái và retry Comment lỗi qua endpoint riêng.
+- Cùng một `Idempotency-Key` chỉ tạo một Comment; retry sau khi mất phản hồi trả lại kết quả trước đó.
+  Dùng lại key với Post hoặc nội dung khác bị từ chối để tránh ghi nhầm.
+- Tác giả xem trạng thái qua endpoint không cache (`private, no-store`) và retry Comment lỗi qua
+  endpoint riêng.
 - Công nghệ chính: API `/api/posts/[postId]/comments`, `/api/comments/*`, Prisma `Comment`,
   shared moderation pipeline.
 
@@ -188,6 +197,8 @@ Admin chọn cửa sổ 24h hoặc 7d
 - Chỉ nội dung public được dùng làm nguồn Trending.
 - Cache bounded giúp giảm gọi embedding/model khi Admin đổi trang hoặc refresh liên tục.
 - Khi provider không sẵn sàng, tên cụm dùng keyword fallback thay vì bịa kết quả AI.
+- Snapshot top cụm theo ngày/tuần/tháng trong PostgreSQL chưa có ở bản hiện tại; đây là hạng mục
+  roadmap, không phải cơ chế cache đang chạy.
 - Công nghệ chính: `lib/trending/*`, OpenAI `text-embedding-3-small`, `ml-kmeans`, cache in-memory,
   API `/api/trending`.
 
@@ -199,7 +210,7 @@ Admin chọn cửa sổ 24h hoặc 7d
 Admin đăng nhập
   → Admin layout kiểm tra role
   → Dashboard: số liệu và Trending
-  → Users: tìm kiếm/xem hồ sơ an toàn
+  → Users: tìm kiếm/xem hồ sơ an toàn (đổi role đang chờ quyết định scope)
   → Content: lọc Post/Comment theo trạng thái
   → Moderation logs: xem lịch sử AI/human
   → Topics: tạo, sửa, ẩn/hiện
@@ -231,7 +242,23 @@ Scheduler
 - Công nghệ chính: `app/api/health/route.ts`, `lib/retention/*`, `lib/observability/langfuse/*`,
   Docker Compose, Caddy trong môi trường demo.
 
-## 11. Seed demo và quality gates
+## 11. Trang Quy tắc cộng đồng
+
+**Mục đích:** công khai các chuẩn hành vi ngắn gọn để thành viên hiểu trước khi đăng hoặc bình luận.
+
+```text
+Người dùng mở /[locale]/community-rules
+  → đọc 6 quy tắc tóm tắt và phạm vi áp dụng
+  → hiểu nội dung vi phạm có thể bị từ chối hoặc chuyển Moderator xem xét
+```
+
+- Trang hỗ trợ VI/EN, có lối tắt từ trang chủ và footer.
+- Nội dung là bản tóm tắt dễ đọc của quy tắc CR-001…CR-006; không thay thế policy/moderation
+  server-side.
+- Công nghệ chính: `app/[locale]/(public)/community-rules/page.tsx`, `messages/*.json`,
+  `specs/001-vinfast-community-forum/community-rules.md`.
+
+## 12. Seed demo và quality gates
 
 **Mục đích:** tạo dữ liệu demo có thể lặp lại và chứng minh chức năng không phụ thuộc hoàn toàn vào
 provider AI live.
@@ -241,11 +268,11 @@ SEED_DEMO_PASSWORD có mặt
   → Prisma migrations
   → kiểm inventory/checksum ảnh
   → seed idempotent có guard chống ghi đè dữ liệu phát sinh
-  → 7 Topic, 36 account, 120 Post, 240 Comment, 466 audit log, 48 ảnh
+  → 7 Topic, 36 account, 40 Post, 100 Comment, 181 audit log, 17 ảnh trên 13 Post
   → test unit/integration/E2E/contract/fixture checks
 ```
 
-- Nội dung seed phân bổ 70% tiếng Việt, 15% mixed và 15% tiếng Anh; phủ các trạng thái moderation.
+- Mỗi nội dung seed xuất hiện một lần; Post gồm 33 VI/4 EN/3 mixed và phủ các trạng thái moderation.
 - Seed dừng khi phát hiện fixture đã có tương tác thật hoặc namespace bị chiếm, thay vì ép ghi đè.
 - Có E2E provider-free để chạy không cần OpenAI/Langfuse; live eval là luồng kiểm tra tách biệt.
 - Công nghệ chính: Prisma seed, Vitest, Playwright, Redocly, fixture ảnh `sharp`.

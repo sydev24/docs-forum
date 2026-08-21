@@ -311,10 +311,10 @@
           <main class="content" id="main-content">
             <header class="page-head">
               <div class="page-head-copy">
-                <p class="eyebrow">AI moderation · Evaluation snapshot</p>
-                <h1>115 cases chạy song song với concurrency 8.</h1>
+                <p class="eyebrow">AI moderation · Diagnostic snapshot</p>
+                <h1>Run chẩn đoán 115 cases với concurrency 8.</h1>
                 <p class="lede">
-                  Bản tóm tắt gọn cho lần đánh giá AI moderation ở môi trường development/local.
+                  Bản tóm tắt development/local riêng, dùng để quan sát verdict, độ trễ và chi phí.
                 </p>
               </div>
               <div class="actions">
@@ -348,6 +348,29 @@
               </div>
             </header>
 
+            <div class="note">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M12 3 2.8 20h18.4L12 3Z"></path>
+                <path d="M12 9v5M12 17h.01"></path>
+              </svg>
+              <div>
+                <strong>Không thay thế cổng official</strong>
+                <p>
+                  Đây là run diagnostic ngày 14/08, concurrency 8. Cổng moderation chính thức là
+                  checkpoint live ngày 12/08, concurrency 2, đạt 113/115 theo tiêu chí khớp đầy đủ.
+                  Không gộp hai run thành một KPI.
+                </p>
+              </div>
+            </div>
+
             <section class="signal-banner" aria-label="Kết quả tổng quan AI eval">
               <div class="signal-copy">
                 <p class="eyebrow">Kết quả tổng quan</p>
@@ -357,7 +380,7 @@
                   false approval trong lần chạy này.
                 </p>
                 <div class="chip-row">
-                  <span class="chip chip-pass">99,13% phù hợp</span>
+                  <span class="chip chip-info">99,13% verdict agreement</span>
                   <span class="chip chip-pass">0 lỗi pipeline</span>
                   <span class="chip chip-pass">115/115 trong timeout</span>
                 </div>

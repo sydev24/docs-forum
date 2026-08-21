@@ -297,14 +297,14 @@
               ><b>Moderation Eval</b>
             </div>
             <div class="topbar-meta">
-              <span class="live-dot"></span><span>SNAPSHOT · 2026-08-14</span>
+              <span class="live-dot"></span><span>LIVE API EVIDENCE · 2026-08-12</span>
             </div>
           </div>
           <main class="content" id="main-content">
             <header class="page-head">
               <div class="page-head-copy">
-                <p class="eyebrow">AI evaluation · Official live</p>
-                <h1>Moderation đạt 98,3% trên 115 cases.</h1>
+                <p class="eyebrow">AI evaluation · Live API evidence</p>
+                <h1>Cổng moderation đạt 98,3% trên 115 cases.</h1>
                 <p class="lede">Kết quả pipeline hai lớp, dataset và giới hạn provenance.</p>
               </div>
               <div class="actions">
@@ -355,9 +355,9 @@
               <div>
                 <strong>Ranh giới dữ liệu</strong>
                 <p>
-                  Trang này giữ summary official lịch sử 113/115. Snapshot development/local mới hơn
-                  được tóm tắt riêng ở AI Eval 115 cases; trang cases vẫn chỉ trình bày canonical
-                  dataset và expected labels, không suy diễn actual result từng case.
+                  Cổng chính thức ngày 12/08 là 113/115: một case phải khớp verdict, rule và content
+                  source. 114/115 chỉ là số cùng verdict trong cùng checkpoint; không thay cổng
+                  chính thức. Trang cases chỉ trình bày canonical dataset và expected labels.
                 </p>
               </div>
             </div>
@@ -383,7 +383,7 @@
                     ></span>
                   </div>
                   <div class="kpi-value">98,3%</div>
-                  <div class="kpi-sub">113 đúng trên 115 cases</div>
+                  <div class="kpi-sub">113 khớp hoàn toàn trên 115 cases</div>
                 </article>
 
                 <article class="card kpi-card">
@@ -457,7 +457,7 @@
                   <p class="section-kicker">Breakdown</p>
                   <h2>Độ chính xác theo ngôn ngữ</h2>
                   <p class="section-copy">
-                    Mỗi nhóm ngôn ngữ đều vượt 90%; EN và mixed đạt tuyệt đối trong run này.
+                    Mỗi nhóm ngôn ngữ đều vượt 90%; EN và mixed đạt tuyệt đối trong snapshot này.
                   </p>
                 </div>
                 <span class="section-index">01</span>
@@ -467,9 +467,9 @@
                   <div class="card-head">
                     <div>
                       <h3>Language accuracy</h3>
-                      <p>Correct / total: 61/63 · 24/24 · 28/28</p>
+                      <p>Khớp hoàn toàn: 61/63 · 24/24 · 28/28</p>
                     </div>
-                    <span class="chip chip-live">Live evidence</span>
+                    <span class="chip chip-live">Live · 12/08</span>
                   </div>
                   <div class="bar-list">
                     <div class="bar-row">
@@ -499,7 +499,7 @@
                   <div class="card-head">
                     <div>
                       <h3>Overall</h3>
-                      <p>Official full-selection</p>
+                      <p>Official full-contract gate</p>
                     </div>
                     <span class="chip chip-pass">PASS</span>
                   </div>
@@ -618,8 +618,11 @@
               <div class="section-head">
                 <div>
                   <p class="section-kicker">Mismatches</p>
-                  <h2>Hai case cần đọc đúng ngữ cảnh</h2>
-                  <p class="section-copy">Cả hai đều không tạo unsafe false approval.</p>
+                  <h2>Hai sai lệch của cổng khớp hoàn toàn</h2>
+                  <p class="section-copy">
+                    Một case lệch metadata nhưng giữ cùng verdict; một case chuyển sang Moderator
+                    theo hướng an toàn.
+                  </p>
                 </div>
                 <span class="section-index">03</span>
               </div>
@@ -628,13 +631,13 @@
                   <div class="card-head">
                     <div>
                       <h3>MC-065</h3>
-                      <p>Metadata mismatch</p>
+                      <p>Lệch metadata, verdict phù hợp</p>
                     </div>
-                    <span class="chip chip-warn">Safe outcome</span>
+                    <span class="chip chip-pass">Verdict match</span>
                   </div>
                   <p class="lede" style="font-size: 12px">
-                    Verdict vẫn đúng pending_review, nhưng rule/content-source không khớp toàn bộ
-                    expected case.
+                    Verdict pending_review phù hợp với nhãn kỳ vọng. Tuy nhiên rule/content-source
+                    không khớp đầy đủ, nên case này không được tính vào 113/115 strict accuracy.
                   </p>
                   <div class="note info" style="margin-top: 18px">
                     <svg
@@ -651,7 +654,10 @@
                     </svg>
                     <div>
                       <strong>Ý nghĩa an toàn</strong>
-                      <p>Không thay đổi quyết định an toàn cuối cùng.</p>
+                      <p>
+                        Không làm thay đổi quyết định an toàn cuối cùng, nhưng vẫn là một sai lệch
+                        khi đo đầy đủ verdict + rule + source.
+                      </p>
                     </div>
                   </div>
                 </article>
@@ -659,7 +665,7 @@
                   <div class="card-head">
                     <div>
                       <h3>MC-124</h3>
-                      <p>Safe false positive</p>
+                      <p>Lệch verdict · safe false positive</p>
                     </div>
                     <span class="chip chip-warn">Safe outcome</span>
                   </div>
@@ -712,8 +718,8 @@
                     <tbody>
                       <tr>
                         <td>Evidence</td>
-                        <td><span class="chip chip-live">Live evidence</span></td>
-                        <td>Official live full-selection</td>
+                        <td><span class="chip chip-live">Live · historical</span></td>
+                        <td>Official full-selection · 12/08/2026</td>
                       </tr>
                       <tr>
                         <td>Dataset SHA-256</td>
@@ -751,7 +757,9 @@
             </section>
             <footer class="footer-note">
               <span>VF Forum · Báo cáo tĩnh dành cho quản lý &amp; mentor</span>
-              <span>Snapshot 2026-08-14 · Không chứa secrets hoặc dữ liệu cá nhân thật</span>
+              <span
+                >Live API evidence 2026-08-12 · Không chứa secrets hoặc dữ liệu cá nhân thật</span
+              >
             </footer>
           </main>
         </div>

@@ -389,12 +389,12 @@
                 </article>
                 <article class="card card-pad">
                   <div class="card-head">
-                    <h3>Idempotency &amp; API resilience</h3>
+                    <h3>Idempotency cho Post &amp; UX bền vững</h3>
                     <span class="chip chip-info">Nền tảng</span>
                   </div>
                   <p>
-                    Thêm idempotency key cho tạo Post/Comment, chống gửi trùng khi client mất phản
-                    hồi hoặc người dùng bấm lại.
+                    Comment đã có `Idempotency-Key`; mở rộng nguyên tắc này sang tạo Post và chuẩn
+                    hóa phản hồi/retry để chống gửi trùng khi client mất phản hồi hoặc bấm lại.
                   </p>
                   <p class="item-copy">
                     Lưu request key, response terminal và policy retry rõ ràng.
@@ -423,22 +423,22 @@
                 </article>
                 <article class="card card-pad">
                   <div class="card-head">
-                    <h3>Tìm kiếm &amp; bộ lọc</h3>
+                    <h3>Bài viết liên quan</h3>
                     <span class="chip chip-info">UX</span>
                   </div>
                   <p>
-                    Tìm theo Topic, model xe, trạng thái và từ khóa; lưu bộ lọc thường dùng cho
-                    Moderator/Admin.
+                    Hiển thị lối tắt các Post đã public cùng Topic ngay tại trang chi tiết Post, có
+                    thứ tự rõ ràng và loại trừ Post đang xem.
                   </p>
                 </article>
                 <article class="card card-pad">
                   <div class="card-head">
-                    <h3>Thông báo theo vai trò</h3>
+                    <h3>Trending snapshots</h3>
                     <span class="chip chip-info">UX</span>
                   </div>
                   <p>
-                    Thông báo in-app/email khi Post đổi trạng thái, có quyết định moderation hoặc có
-                    phản hồi mới.
+                    Lưu top 5 cụm theo ngày (00:00–24:00, Asia/Ho_Chi_Minh) vào PostgreSQL để tổng
+                    hợp báo cáo tuần/tháng, thay vì chỉ dùng cache in-memory 5 phút hiện tại.
                   </p>
                 </article>
               </div>

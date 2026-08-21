@@ -151,7 +151,7 @@
           </nav>
           <div class="sidebar-footer">
             <strong>Báo cáo tĩnh · Sprint 3</strong>
-            Dữ liệu khóa ngày 2026-08-14
+            Evidence phân mốc 12–21/08
           </div>
         </aside>
 
@@ -308,19 +308,22 @@
               ><b>Executive dashboard</b>
             </div>
             <div class="topbar-meta">
-              <span class="live-dot"></span><span>SNAPSHOT · 2026-08-14</span>
+              <span class="live-dot"></span><span>ĐỒNG BỘ SẢN PHẨM · 2026-08-21</span>
             </div>
           </div>
           <main class="content" id="main-content">
             <header class="page-head">
               <div class="page-head-copy">
-                <p class="eyebrow">Executive snapshot · Sprint 3</p>
-                <h1>Sẵn sàng demo, có evidence rõ ràng.</h1>
-                <p class="lede">Sản phẩm, AI và chất lượng kỹ thuật trong một trang tóm tắt.</p>
+                <p class="eyebrow">Bảng điều khiển bàn giao · Sprint 3</p>
+                <h1>Demo lõi đã chạy được; còn 3 việc cần chốt trước khi nghiệm thu hoàn tất.</h1>
+                <p class="lede">
+                  Mỗi số đều ghi rõ là kiểm tra mới, evidence lịch sử hoặc việc còn mở để người xem
+                  không cần đọc tài liệu kỹ thuật vẫn hiểu được trạng thái.
+                </p>
               </div>
               <div class="actions">
-                <a class="button button-primary" href="./reports/langfuse-live-115.html"
-                  ><span>Tóm tắt eval 115 cases</span
+                <a class="button button-primary" href="./reports/moderation.html"
+                  ><span>Xem kết quả kiểm tra nội dung</span
                   ><svg
                     viewBox="0 0 24 24"
                     fill="none"
@@ -336,39 +339,65 @@
               </div>
             </header>
 
-            <section class="signal-banner" aria-label="Kết quả moderation nổi bật">
+            <section class="signal-banner" aria-label="Tình trạng bàn giao tổng quan">
               <div class="signal-copy">
-                <p class="eyebrow">Official live moderation</p>
-                <h2>Gate đạt, không có false approval nguy hiểm.</h2>
+                <p class="eyebrow">Tình trạng tổng quan</p>
+                <h2>Kiểm tra tự động mới nhất đều xanh; phần nghiệm thu còn được theo dõi rõ.</h2>
                 <p>
-                  Hai mismatch còn lại đều được giữ theo hướng an toàn. Pipeline hoàn tất đầy đủ 115
-                  cases với hai lớp moderation hiện hành.
+                  Có thể demo các luồng lõi. Tuy nhiên, kiểm tra Comment mới, Langfuse live và quyết
+                  định phạm vi quyền Admin vẫn phải được chốt trước khi gọi đây là bàn giao hoàn
+                  tất.
                 </p>
                 <div class="chip-row">
-                  <span class="chip chip-pass">Gate PASS</span
-                  ><span class="chip">0 pipeline failure</span
-                  ><span class="chip">0 unsafe false approval</span>
+                  <span class="chip chip-pass">944/944 automated tests</span
+                  ><span class="chip chip-warn">3 việc cần chốt</span
+                  ><span class="chip chip-info">Không phải SLA production</span>
                 </div>
               </div>
               <div class="signal-score">
-                <div class="score-number">113<span>/115</span></div>
-                <div class="score-label">Accuracy · 98,3%</div>
+                <div class="score-number">944<span>/944</span></div>
+                <div class="score-label">KIỂM TRA TỰ ĐỘNG · 21/08</div>
+              </div>
+            </section>
+
+            <section class="section" aria-labelledby="evidence-note-title">
+              <div class="note info">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M12 11v6M12 7h.01"></path>
+                </svg>
+                <div>
+                  <strong id="evidence-note-title">Cách đọc bảng này</strong>
+                  <p>
+                    “Mới nhất” là kiểm tra chạy lại ngày 21/08. “Lịch sử” là evidence hợp lệ ở
+                    checkpoint trước, chưa được chạy lại sau các thay đổi mới. Các con số AI dùng
+                    dataset giả lập tự rà soát, không thay cho cam kết vận hành thực tế.
+                  </p>
+                </div>
               </div>
             </section>
 
             <section class="section">
               <div class="section-head">
                 <div>
-                  <p class="section-kicker">Tín hiệu chính</p>
-                  <h2>Các chỉ số cần biết</h2>
-                  <p class="section-copy">Live, deterministic và provider-free được tách rõ.</p>
+                  <p class="section-kicker">Đọc trong 30 giây</p>
+                  <h2>Bốn số liệu chính</h2>
+                  <p class="section-copy">Ưu tiên số liệu có nguồn và ngày kiểm tra rõ ràng.</p>
                 </div>
                 <span class="section-index">01</span>
               </div>
               <div class="kpi-grid">
                 <article class="card kpi-card">
                   <div class="kpi-top">
-                    <span class="kpi-label">Moderation live</span
+                    <span class="kpi-label">Kiểm tra nội dung</span
                     ><span class="kpi-icon"
                       ><svg
                         viewBox="0 0 24 24"
@@ -384,12 +413,12 @@
                     ></span>
                   </div>
                   <div class="kpi-value">98,3%</div>
-                  <div class="kpi-sub">113/115 · official gate</div>
+                  <div class="kpi-sub">113/115 khớp hoàn toàn · lịch sử 12/08</div>
                 </article>
 
                 <article class="card kpi-card">
                   <div class="kpi-top">
-                    <span class="kpi-label">Dữ liệu seed</span
+                    <span class="kpi-label">Dữ liệu demo</span
                     ><span class="kpi-icon"
                       ><svg
                         viewBox="0 0 24 24"
@@ -408,13 +437,13 @@
                         ></path></svg
                     ></span>
                   </div>
-                  <div class="kpi-value">120 / 240</div>
-                  <div class="kpi-sub">Post / Comment cho bản demo</div>
+                  <div class="kpi-value">40 / 100</div>
+                  <div class="kpi-sub">Post / Comment fixture v4 · đồng bộ 21/08</div>
                 </article>
 
                 <article class="card kpi-card">
                   <div class="kpi-top">
-                    <span class="kpi-label">Vitest</span
+                    <span class="kpi-label">Kiểm tra tự động</span
                     ><span class="kpi-icon"
                       ><svg
                         viewBox="0 0 24 24"
@@ -429,13 +458,13 @@
                         <path d="M7 14h10M8 3h8"></path></svg
                     ></span>
                   </div>
-                  <div class="kpi-value">842</div>
-                  <div class="kpi-sub">80/80 files · deterministic mới nhất</div>
+                  <div class="kpi-value">944/944</div>
+                  <div class="kpi-sub">84/84 files · chạy lại 21/08</div>
                 </article>
 
                 <article class="card kpi-card">
                   <div class="kpi-top">
-                    <span class="kpi-label">E2E checkpoint</span
+                    <span class="kpi-label">Browser E2E</span
                     ><span class="kpi-icon"
                       ><svg
                         viewBox="0 0 24 24"
@@ -449,8 +478,8 @@
                         <path d="m4 12 5 5L20 6"></path></svg
                     ></span>
                   </div>
-                  <div class="kpi-value">14/14</div>
-                  <div class="kpi-sub">13/08 · Chromium provider-free</div>
+                  <div class="kpi-value">33/33</div>
+                  <div class="kpi-sub">Lịch sử 14/08 · cần chạy lại sau thay đổi mới</div>
                 </article>
               </div>
             </section>
@@ -458,75 +487,315 @@
             <section class="section">
               <div class="section-head">
                 <div>
-                  <p class="section-kicker">Chất lượng</p>
-                  <h2>Chất lượng AI và dữ liệu demo</h2>
-                  <p class="section-copy">Kết quả moderation và dữ liệu sẵn sàng cho demo.</p>
+                  <p class="section-kicker">Việc cần hoàn tất</p>
+                  <h2>Ba đèn vàng trước khi bàn giao</h2>
+                  <p class="section-copy">
+                    Các mục này không làm mất kết quả đã có, nhưng chưa nên bị che bởi badge PASS.
+                  </p>
                 </div>
                 <span class="section-index">02</span>
+              </div>
+              <div class="criteria-grid">
+                <article class="criterion">
+                  <span class="criterion-code">01</span>
+                  <div>
+                    <div class="criterion-title">Xác minh luồng Comment mới</div>
+                    <div class="criterion-copy">
+                      T169 còn mở: chạy full test, E2E và các case replay/giới hạn theo ngày. SC-002
+                      và SC-010 đang mở lại.
+                    </div>
+                  </div>
+                  <span class="status-dot open" title="Cần hoàn tất"></span>
+                </article>
+                <article class="criterion">
+                  <span class="criterion-code">02</span>
+                  <div>
+                    <div class="criterion-title">Langfuse live smoke</div>
+                    <div class="criterion-copy">
+                      T124 cần credentials thật để kiểm tra trace và redaction trong môi trường có
+                      telemetry.
+                    </div>
+                  </div>
+                  <span class="status-dot open" title="Cần hoàn tất"></span>
+                </article>
+                <article class="criterion">
+                  <span class="criterion-code">03</span>
+                  <div>
+                    <div class="criterion-title">Chốt phạm vi quyền Admin</div>
+                    <div class="criterion-copy">
+                      Route đổi role đã có, nhưng baseline Admin Directory được mô tả chỉ-đọc; cần
+                      xác nhận scope trước khi công bố.
+                    </div>
+                  </div>
+                  <span class="status-dot open" title="Cần quyết định"></span>
+                </article>
+              </div>
+            </section>
+
+            <section class="section">
+              <div class="section-head">
+                <div>
+                  <p class="section-kicker">Kiểm tra nội dung AI</p>
+                  <h2>Điểm chính thức và lý do có hai con số</h2>
+                  <p class="section-copy">
+                    Không chỉ nhìn tỷ lệ cao: bảng này cho biết con số đó đo điều gì.
+                  </p>
+                </div>
+                <span class="section-index">03</span>
               </div>
               <div class="grid-main-aside">
                 <article class="card card-pad">
                   <div class="card-head">
                     <div>
-                      <h3>Moderation theo ngôn ngữ</h3>
-                      <p>Official live run · 115 cases</p>
+                      <h3>Khớp hoàn toàn · chỉ số chính thức</h3>
+                      <p>Đúng cả quyết định, quy tắc và nguồn nội dung</p>
                     </div>
-                    <span class="chip chip-live">Live evidence</span>
+                    <span class="chip chip-pass">PASS · lịch sử 12/08</span>
                   </div>
-
+                  <figure class="donut-wrap">
+                    <div
+                      class="donut"
+                      style="--donut: 98.3%"
+                      role="img"
+                      aria-label="113 trên 115 ca khớp hoàn toàn, tương đương 98,3 phần trăm"
+                    >
+                      <div><strong>98,3%</strong><span>113 / 115</span></div>
+                    </div>
+                    <figcaption class="chart-caption">
+                      Đây là số dùng cho cổng quality chính thức. Không có pipeline failure hoặc phê
+                      duyệt sai nguy hiểm trong checkpoint này.
+                    </figcaption>
+                  </figure>
+                </article>
+                <article class="card card-pad">
+                  <div class="card-head">
+                    <div>
+                      <h3>Giải thích chênh lệch</h3>
+                      <p>Mỗi thanh biểu diễn 115 tình huống đã gắn nhãn</p>
+                    </div>
+                    <span class="chip chip-info">Dễ đọc</span>
+                  </div>
                   <div class="bar-list">
                     <div class="bar-row">
-                      <span class="bar-label">Tiếng Việt</span>
+                      <span class="bar-label">Khớp hoàn toàn</span>
                       <span class="bar-track"
-                        ><span class="bar-fill good" style="--value: 96.8%"></span
+                        ><span class="bar-fill good" style="--value: 98.3%"></span
                       ></span>
-                      <span class="bar-value">96,8%</span>
+                      <span class="bar-value">113</span>
                     </div>
                     <div class="bar-row">
-                      <span class="bar-label">Tiếng Anh</span>
+                      <span class="bar-label">Chỉ khác chi tiết</span>
                       <span class="bar-track"
-                        ><span class="bar-fill good" style="--value: 100%"></span
+                        ><span class="bar-fill info" style="--value: 0.87%"></span
                       ></span>
-                      <span class="bar-value">100%</span>
+                      <span class="bar-value">1</span>
                     </div>
                     <div class="bar-row">
-                      <span class="bar-label">Hỗn hợp</span>
+                      <span class="bar-label">Khác quyết định, an toàn</span>
                       <span class="bar-track"
-                        ><span class="bar-fill good" style="--value: 100%"></span
+                        ><span class="bar-fill" style="--value: 0.87%"></span
                       ></span>
-                      <span class="bar-value">100%</span>
+                      <span class="bar-value">1</span>
+                    </div>
+                  </div>
+                  <p class="chart-caption">
+                    Có 1 ca cùng quyết định nhưng khác chi tiết rule/source (MC-065), và 1 ca bị
+                    chuyển sang Moderator thay vì approve — false positive theo hướng an toàn
+                    (MC-124). Nếu chỉ so quyết định, checkpoint 12/08 có 114/115; đó là số tham
+                    khảo, không thay số chính thức 113/115.
+                  </p>
+                </article>
+              </div>
+            </section>
+
+            <section class="section">
+              <div class="section-head">
+                <div>
+                  <p class="section-kicker">Phạm vi đã kiểm tra</p>
+                  <h2>Dataset có cả bài viết, bình luận và ảnh</h2>
+                  <p class="section-copy">
+                    Biểu đồ mô tả phạm vi test, không phải dữ liệu người dùng thực.
+                  </p>
+                </div>
+                <span class="section-index">04</span>
+              </div>
+              <div class="grid-3">
+                <article class="card card-pad">
+                  <div class="card-head">
+                    <div>
+                      <h3>Loại nội dung</h3>
+                      <p>115 tình huống giả lập</p>
+                    </div>
+                    <span class="chip chip-info">Phạm vi</span>
+                  </div>
+                  <div class="bar-list">
+                    <div class="bar-row">
+                      <span class="bar-label">Bài viết</span>
+                      <span class="bar-track"
+                        ><span class="bar-fill good" style="--value: 42.6%"></span
+                      ></span>
+                      <span class="bar-value">49</span>
+                    </div>
+                    <div class="bar-row">
+                      <span class="bar-label">Bình luận</span>
+                      <span class="bar-track"
+                        ><span class="bar-fill good" style="--value: 36.5%"></span
+                      ></span>
+                      <span class="bar-value">42</span>
+                    </div>
+                    <div class="bar-row">
+                      <span class="bar-label">Ảnh bài viết</span>
+                      <span class="bar-track"
+                        ><span class="bar-fill info" style="--value: 20.9%"></span
+                      ></span>
+                      <span class="bar-value">24</span>
                     </div>
                   </div>
                 </article>
                 <article class="card card-pad">
                   <div class="card-head">
                     <div>
-                      <h3>Phân bố dữ liệu seed</h3>
-                      <p>120 Post · 240 Comment</p>
+                      <h3>Theo ngôn ngữ</h3>
+                      <p>Điểm chính thức · khớp hoàn toàn</p>
                     </div>
-                    <span class="chip chip-info">Demo data</span>
+                    <span class="chip chip-pass">Tất cả &gt; 90%</span>
                   </div>
                   <div class="bar-list">
                     <div class="bar-row">
                       <span class="bar-label">Tiếng Việt</span>
                       <span class="bar-track"
-                        ><span class="bar-fill" style="--value: 70%"></span
+                        ><span class="bar-fill good" style="--value: 96.8%"></span
                       ></span>
-                      <span class="bar-value">70%</span>
-                    </div>
-                    <div class="bar-row">
-                      <span class="bar-label">Hỗn hợp</span>
-                      <span class="bar-track"
-                        ><span class="bar-fill" style="--value: 15%"></span
-                      ></span>
-                      <span class="bar-value">15%</span>
+                      <span class="bar-value">61/63</span>
                     </div>
                     <div class="bar-row">
                       <span class="bar-label">Tiếng Anh</span>
                       <span class="bar-track"
-                        ><span class="bar-fill" style="--value: 15%"></span
+                        ><span class="bar-fill good" style="--value: 100%"></span
                       ></span>
-                      <span class="bar-value">15%</span>
+                      <span class="bar-value">24/24</span>
+                    </div>
+                    <div class="bar-row">
+                      <span class="bar-label">Hỗn hợp</span>
+                      <span class="bar-track"
+                        ><span class="bar-fill good" style="--value: 100%"></span
+                      ></span>
+                      <span class="bar-value">28/28</span>
+                    </div>
+                  </div>
+                </article>
+                <article class="card card-pad">
+                  <div class="card-head">
+                    <div>
+                      <h3>Giới hạn cần nhớ</h3>
+                      <p>Để không hiểu quá mức về số liệu</p>
+                    </div>
+                    <span class="chip chip-warn">Chú thích</span>
+                  </div>
+                  <ul class="insight-list">
+                    <li class="insight-item">
+                      <span class="item-index">01</span>
+                      <div>
+                        <p class="item-title">Dataset tự rà soát</p>
+                        <p class="item-copy">
+                          Chưa được tuyên bố là golden set hay mentor-approved.
+                        </p>
+                      </div>
+                    </li>
+                    <li class="insight-item">
+                      <span class="item-index">02</span>
+                      <div>
+                        <p class="item-title">Không phải SLA production</p>
+                        <p class="item-copy">
+                          Không suy ra độ trễ, chi phí hay độ ổn định thực tế từ snapshot này.
+                        </p>
+                      </div>
+                    </li>
+                    <li class="insight-item">
+                      <span class="item-index">03</span>
+                      <div>
+                        <p class="item-title">Raw official result cần phục hồi nếu audit</p>
+                        <p class="item-copy">Không suy diễn per-case từ bảng tóm tắt.</p>
+                      </div>
+                    </li>
+                  </ul>
+                </article>
+              </div>
+            </section>
+
+            <section class="section">
+              <div class="section-head">
+                <div>
+                  <p class="section-kicker">Dữ liệu demo</p>
+                  <h2>Fixture được thiết kế để demo, không phải số liệu người dùng</h2>
+                  <p class="section-copy">
+                    Các số này mô tả fixture trình diễn hiện hành, không phải hành vi người dùng.
+                  </p>
+                </div>
+                <span class="section-index">05</span>
+              </div>
+              <div class="grid-main-aside">
+                <article class="card card-pad">
+                  <div class="card-head">
+                    <div>
+                      <h3>Hồ sơ fixture v4</h3>
+                      <p>Đồng bộ source ngày 21/08</p>
+                    </div>
+                    <span class="chip chip-info">Demo fixture</span>
+                  </div>
+                  <ul class="insight-list">
+                    <li class="insight-item">
+                      <span class="item-index">7</span>
+                      <div>
+                        <p class="item-title">Chủ đề</p>
+                        <p class="item-copy">Đủ để trình bày nhiều khu vực thảo luận.</p>
+                      </div>
+                    </li>
+                    <li class="insight-item">
+                      <span class="item-index">36</span>
+                      <div>
+                        <p class="item-title">Tài khoản demo</p>
+                        <p class="item-copy">Phục vụ luồng bốn vai trò và phân quyền.</p>
+                      </div>
+                    </li>
+                    <li class="insight-item">
+                      <span class="item-index">181</span>
+                      <div>
+                        <p class="item-title">Moderation logs</p>
+                        <p class="item-copy">Dùng để minh họa lịch sử quyết định và audit.</p>
+                      </div>
+                    </li>
+                  </ul>
+                </article>
+                <article class="card card-pad">
+                  <div class="card-head">
+                    <div>
+                      <h3>Nội dung để trình diễn</h3>
+                      <p>40 Post · 100 Comment · 17 ảnh trên 13 Post</p>
+                    </div>
+                    <span class="chip chip-warn">Không phải usage thật</span>
+                  </div>
+                  <div class="bar-list">
+                    <div class="bar-row">
+                      <span class="bar-label">Post tiếng Việt</span>
+                      <span class="bar-track"
+                        ><span class="bar-fill" style="--value: 82.5%"></span
+                      ></span>
+                      <span class="bar-value">33</span>
+                    </div>
+                    <div class="bar-row">
+                      <span class="bar-label">Post tiếng Anh</span>
+                      <span class="bar-track"
+                        ><span class="bar-fill info" style="--value: 10%"></span
+                      ></span>
+                      <span class="bar-value">4</span>
+                    </div>
+                    <div class="bar-row">
+                      <span class="bar-label">Post hỗn hợp</span>
+                      <span class="bar-track"
+                        ><span class="bar-fill info" style="--value: 7.5%"></span
+                      ></span>
+                      <span class="bar-value">3</span>
                     </div>
                   </div>
                 </article>
@@ -537,17 +806,19 @@
               <div class="section-head">
                 <div>
                   <p class="section-kicker">Engineering evidence</p>
-                  <h2>Coverage vượt ngưỡng repository</h2>
-                  <p class="section-copy">Ngưỡng tối thiểu hiện hành là 90% cho từng chỉ số.</p>
+                  <h2>Độ phủ kiểm tra vượt mốc tối thiểu</h2>
+                  <p class="section-copy">
+                    Vạch nhỏ trên mỗi thanh là mốc tối thiểu 90% của repository.
+                  </p>
                 </div>
-                <span class="section-index">03</span>
+                <span class="section-index">06</span>
               </div>
               <div class="grid-main-aside">
                 <article class="card card-pad">
                   <div class="card-head">
                     <div>
-                      <h3>Coverage checkpoint</h3>
-                      <p>13/08 · 80 files · 841 tests</p>
+                      <h3>Kết quả chạy lại mới nhất</h3>
+                      <p>21/08 · 84 files · 944 tests</p>
                     </div>
                     <span class="chip chip-pass">PASS</span>
                   </div>
@@ -555,61 +826,70 @@
                   <div class="bar-list">
                     <div class="bar-row">
                       <span class="bar-label">Statements</span>
-                      <span class="bar-track"
-                        ><span class="bar-fill good" style="--value: 95%"></span
+                      <span class="bar-track has-target"
+                        ><span class="bar-fill good" style="--value: 95.4%"></span
                       ></span>
-                      <span class="bar-value">95%</span>
+                      <span class="bar-value">95,40%</span>
                     </div>
                     <div class="bar-row">
                       <span class="bar-label">Branches</span>
-                      <span class="bar-track"
-                        ><span class="bar-fill good" style="--value: 90.78%"></span
+                      <span class="bar-track has-target"
+                        ><span class="bar-fill good" style="--value: 92.06%"></span
                       ></span>
-                      <span class="bar-value">90,8%</span>
+                      <span class="bar-value">92,06%</span>
                     </div>
                     <div class="bar-row">
                       <span class="bar-label">Functions</span>
-                      <span class="bar-track"
-                        ><span class="bar-fill good" style="--value: 96.68%"></span
+                      <span class="bar-track has-target"
+                        ><span class="bar-fill good" style="--value: 96.39%"></span
                       ></span>
-                      <span class="bar-value">96,7%</span>
+                      <span class="bar-value">96,39%</span>
                     </div>
                     <div class="bar-row">
                       <span class="bar-label">Lines</span>
-                      <span class="bar-track"
-                        ><span class="bar-fill good" style="--value: 95.91%"></span
+                      <span class="bar-track has-target"
+                        ><span class="bar-fill good" style="--value: 96.19%"></span
                       ></span>
-                      <span class="bar-value">95,9%</span>
+                      <span class="bar-value">96,19%</span>
                     </div>
                   </div>
                 </article>
                 <article class="card card-pad">
                   <div class="card-head">
                     <div>
-                      <h3>Điểm quản lý cần lưu ý</h3>
-                      <p>Đọc trước khi dùng số liệu</p>
+                      <h3>Những gì số liệu này có và chưa có</h3>
+                      <p>Chú thích để không đọc nhầm trạng thái</p>
                     </div>
                   </div>
                   <ul class="insight-list">
                     <li class="insight-item">
                       <span class="item-index">01</span>
                       <div>
-                        <p class="item-title">115 là dataset hiện hành</p>
-                        <p class="item-copy">Bản JSON cũ 107 cases chỉ là archive lịch sử.</p>
+                        <p class="item-title">Code được kiểm tra lại ngày 21/08</p>
+                        <p class="item-copy">
+                          944/944 là unit + integration; đây là evidence mới nhất trên source hiện
+                          hành.
+                        </p>
                       </div>
                     </li>
                     <li class="insight-item">
                       <span class="item-index">02</span>
                       <div>
-                        <p class="item-title">Raw result 115 không còn local</p>
-                        <p class="item-copy">Actual per-case không được suy diễn từ summary.</p>
+                        <p class="item-title">Browser và build chưa phải evidence mới</p>
+                        <p class="item-copy">
+                          33/33 Chromium và production build vẫn là checkpoint lịch sử, cần chạy lại
+                          sau refinement Comment.
+                        </p>
                       </div>
                     </li>
                     <li class="insight-item">
                       <span class="item-index">03</span>
                       <div>
-                        <p class="item-title">Langfuse live smoke còn mở</p>
-                        <p class="item-copy">Cần credentials thật và được theo dõi riêng.</p>
+                        <p class="item-title">Cổng bàn giao vẫn có mục mở</p>
+                        <p class="item-copy">
+                          T169 kiểm tra Comment và T124 Langfuse live được hiển thị vàng ở đầu
+                          trang.
+                        </p>
                       </div>
                     </li>
                   </ul>
@@ -621,66 +901,84 @@
               <div class="section-head">
                 <div>
                   <p class="section-kicker">Provenance</p>
-                  <h2>Nguồn dữ liệu chính</h2>
-                  <p class="section-copy">Đường dẫn nguồn được giữ lại để kiểm tra khi cần.</p>
+                  <h2>Nguồn và ngày kiểm tra</h2>
+                  <p class="section-copy">
+                    Mỗi con số trên dashboard có nguồn hoặc trạng thái evidence đi kèm.
+                  </p>
                 </div>
-                <span class="section-index">04</span>
+                <span class="section-index">07</span>
               </div>
               <details class="evidence-details">
-                <summary>Xem 6 nguồn evidence trong repository</summary>
+                <summary>Xem nguồn evidence và trạng thái kiểm tra</summary>
                 <ul class="source-list">
                   <li class="source-item">
                     <span class="item-index">01</span>
                     <div>
-                      <p class="item-title">Canonical moderation dataset</p>
-                      <code class="source-path">data/moderation-cases.json</code>
-                      <p class="item-copy">115 case definitions và expected labels</p>
+                      <p class="item-title">Kiểm tra tự động mới nhất · 21/08</p>
+                      <code class="source-path">npm run test:coverage</code>
+                      <p class="item-copy">
+                        84/84 files, 944/944 tests; typecheck, lint, format và contract lint cũng đã
+                        chạy lại.
+                      </p>
                     </div>
                   </li>
                   <li class="source-item">
                     <span class="item-index">02</span>
                     <div>
-                      <p class="item-title">Sprint 2 testing status</p>
+                      <p class="item-title">Cổng moderation chính thức · lịch sử 12/08</p>
                       <code class="source-path"
                         >specs/001-vinfast-community-forum/sprint-2/testing-status.md</code
                       >
                       <p class="item-copy">
-                        Official live moderation 113/115 và quality gates liên quan
+                        113/115 khớp verdict + rule + source; raw bundle cần được phục hồi nếu cần
+                        audit chi tiết.
                       </p>
                     </div>
                   </li>
                   <li class="source-item">
                     <span class="item-index">03</span>
                     <div>
-                      <p class="item-title">Sprint 3 testing status</p>
-                      <code class="source-path"
-                        >specs/001-vinfast-community-forum/sprint-3/testing-status.md</code
-                      >
-                      <p class="item-copy">Quality gates, AWS demo và Admin refinement</p>
+                      <p class="item-title">Công việc bàn giao còn mở</p>
+                      <code class="source-path">specs/001-vinfast-community-forum/tasks.md</code>
+                      <p class="item-copy">
+                        T169 xác minh Comment và T124 Langfuse live chưa hoàn tất; SC-002/SC-010
+                        đang mở lại.
+                      </p>
                     </div>
                   </li>
                   <li class="source-item">
                     <span class="item-index">04</span>
                     <div>
-                      <p class="item-title">Testing guide</p>
-                      <code class="source-path">tests/README.md</code>
-                      <p class="item-copy">Phân lớp test, lệnh chạy và coverage threshold</p>
+                      <p class="item-title">Dataset moderation hiện hành</p>
+                      <code class="source-path">data/moderation-cases.json</code>
+                      <p class="item-copy">
+                        115 case definitions và expected labels; dataset là self-review, không phải
+                        dữ liệu production.
+                      </p>
                     </div>
                   </li>
                   <li class="source-item">
                     <span class="item-index">05</span>
                     <div>
-                      <p class="item-title">Demo runbook lưu trữ</p>
-                      <code class="source-path">docs/artifact/demo.html</code>
-                      <p class="item-copy">Kịch bản demo, fallback và giới hạn MVP</p>
+                      <p class="item-title">Fixture demo v4 · đồng bộ 21/08</p>
+                      <code class="source-path">README.md</code>
+                      <p class="item-copy">
+                        7 Topic, 36 tài khoản, 40 Post, 100 Comment, 181 moderation log và 17 ảnh
+                        fixture.
+                      </p>
                     </div>
                   </li>
                   <li class="source-item">
                     <span class="item-index">06</span>
                     <div>
-                      <p class="item-title">Archived moderation result</p>
-                      <code class="source-path">artifacts/moderation-eval.json</code>
-                      <p class="item-copy">Bản cũ 107 cases; chỉ dùng đối chiếu lịch sử</p>
+                      <p class="item-title">Browser / live evidence lịch sử</p>
+                      <code class="source-path"
+                        >specs/001-vinfast-community-forum/sprint-3/testing-status.md</code
+                      >
+                      <p class="item-copy">
+                        33/33 Chromium provider-free (14/08) và live AI checkpoint được giữ riêng,
+                        chưa phải rerun sau refinement Comment.
+                      </p>
                     </div>
                   </li>
                 </ul>
@@ -688,7 +986,10 @@
             </section>
             <footer class="footer-note">
               <span>VF Forum · Báo cáo tĩnh dành cho quản lý &amp; mentor</span>
-              <span>Snapshot 2026-08-14 · Không chứa secrets hoặc dữ liệu cá nhân thật</span>
+              <span
+                >Nội dung + test tự động 21/08 · Moderation live 12/08 · Browser E2E lịch sử
+                14/08</span
+              >
             </footer>
           </main>
         </div>
